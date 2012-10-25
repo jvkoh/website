@@ -1,0 +1,10 @@
+# Compile js
+jsmin <public/js/main.js >public/js/main.min.js
+
+# Concatenate 3 needed js files
+cat public/js/libs/jquery.min.js public/js/libs/jquery.jplayer.min.js public/js/main.min.js > dist/debug/jvkoh_website.app.js
+
+# Minify js and css
+grunt release
+
+cp -r dist/release public/
