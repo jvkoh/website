@@ -216,6 +216,7 @@ a.navButton {
   width: 54px;
   background: #fff;
   position: relative;
+  cursor: pointer;
 }
 .jp-volume-bar-value {
   background-color: #93edee;
@@ -230,7 +231,7 @@ a.navButton {
 .jp-no-solution {
   text-align: center;
   width: 100%;
-  font-size: 11px;
+  font-size: 1px;
 }
 .jp-no-solution a {
   color: #eee;
