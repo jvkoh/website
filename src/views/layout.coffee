@@ -2,6 +2,8 @@ doctype 5
 html ->
   head ->
 
+    title "Jonathan Koh"
+
     meta charset:'utf-8'
     meta 'http-equiv':'X-UA-Compatible', content:'IE=edge,chrome=1'
     #meta(name='viewport', content='width=640, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
@@ -20,6 +22,23 @@ html ->
     if !@isDevelopment 
       link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"
       script type: 'text/javascript', src: '/release/javascript.min.js'
+
+    text '''
+      <script type='text/javascript'>
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35896590-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      </script>
+         '''
+
 
   body ->
 
@@ -114,90 +133,86 @@ html ->
           h2 "Music"
 
           ## ALBUM ##
-          div class: 'musicCollection', ->
+          div class: 'indentedSection', ->
             h3 "For Beats Sake"
             div class: 'songsContainer', ->
               for song in @forBeatsSake
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'textPadding', "For Beats Sake is my first album.  It should be finished and released sometime by the end of the year.  These are a few of the tracks that are going into the album.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
             div class: 'clear-both', ->
             
           ## ELECTROFUNK ##
-          div class: 'musicCollection', ->
+          div class: 'indentedSection', ->
             h3 "ElectroFunk"
             div class: 'songsContainer', ->
               for song in @electroFunk
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'textPadding', "These are all largely digital tracks made through a combination of sampling techniques, synthesizers, and funk bass and guitar.  The result is in my mind somewhere between dance music, electro, and funk.  Beat the Clock is a remix I made for the ableton \'Beat the Clock\' remix contest, a contest where the song must be completed using ableton live in less than 24 hours."
             div class: 'clear-both', ->
 
           ## LIVE TRACKS ##
-          div class: 'musicCollection', ->
+          div class: 'indentedSection', ->
             h3 "Misc Live Tracks"
             div class: 'songsContainer', ->
               for song in @miscLive
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'textPadding', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college." 
             div class: 'clear-both', ->
             
+          ## MUSICAL STUDIES ##
+          div class: 'indentedSection', ->
+            h3 "Academic Compositions"
+            div class: 'songsContainer', ->
+              for song in @musicalStudies
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'textPadding', "These are tracks I have made for various classes."
+            div class: 'clear-both', ->
+
           ## MISC BEATS ##
-          div class: 'musicCollection', ->
+          div class: 'indentedSection', ->
             h3 "Misc Beats"
             div class: 'songsContainer', ->
               for song in @miscBeats
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'textPadding', "This is a collection of beats I've made over the past few years since I started making them at the end of my sophomore year of college."
             div class: 'clear-both', ->
 
           ## VIRION ##
-          div class: 'musicCollection', ->
+          div class: 'indentedSection', ->
             h3 "Viron Music"
             div class: 'songsContainer', ->
               for song in @virion
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'textPadding', ->
+              text "This is the soundtrack that I made to the video game "
+              a href: 'https://apps.facebook.com/viriongame/', target:'_blank' , "Virion"
+              text ".  This is an arcade style game based on the human immune system and viruses, that I produced all the sound and music for.  Varun Singh and Jonah Kagan did a great job developing the game, and Charis Loke did amazing work with the art."
             div class: 'clear-both', ->
             
-          ## MUSICAL STUDIES ##
-          div class: 'musicCollection', ->
-            h3 "Musical Studies Compositions"
-            div class: 'songsContainer', ->
-              for song in @musicalStudies
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
-              div class: 'clear-both', ->
-            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
-            div class: 'clear-both', ->
-
       ## ABOUT PAGE ##
       div id: 'aboutPage', ->
         div id: 'about' , class: 'link-target', ->
         div class: 'box', ->
-          h2 ->
-            text "About"
+          h2 "About"
+          img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'200px', ->
           p ->
-            img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'200px', ->
-            text 'Currently pursuing a Computer Music and Computer Science double major at Brown University, I spend my time away from classes primarily on my music.  While I am by no means striving to be a solo artist, I love playing music and understand the importance of being able to hold a groove in any sort of ensemble.'
-          p "I am primarily a guitarist, but also a very competent bassist and drummer having played each for 10, 8, and 6 years respectively.  While I don't get to consistently practice drums at school I find that as all the more incentive to practice at home.  At school that time void can be easily filled with work on electronic music composition."
-          p ->
-            text "My experience working in music thus far has been very well rounded.  Whether it's playing jazz guitar for a private party on new years eve, lending a hand around the studio at ", ->
-            a href: 'http://www.wellspringsound.com/', target: '_blank', 'Wellspring Sound'
-            text ", teaching guitar in the Greater Boston Area, or even playing bass for the rock band "
-            a href: 'http://www.myspace.com/whatsyourmoniker', target: '_blank', 'Moniker',
-            text ", I always seem to have a good time."
-
-          p ->
-            text "In addition to guitar lessons, this coming summer I will be offering my "
-            a href: 'http://jvkoh.tumblr.com/post/2808658080/mini-studio', target: '_blank', 'mini-studio'
-            text "for use recording low-budget demos, primarily aimed at high school students looking to make a portfolio for their college applications.  If you are interested in working in my mini-studio please take a minute to visit my tumblr page as I use it exclusively to post my music, most of which are samples created in said studio."
-          p "If you would like to collaborate with me musically please do not hesitate to send me an email, I'm always looking for more ways to make music."
+            text 'Currently pursuing a Computer Music and Computer Science double major at Brown University, I spend my time away from classes primarily on my music.  While I am by no means striving to be a solo artist, I love playing music and understand the importance of being able to hold a groove in any sort of ensemble.  I am primarily a guitarist, but also am a very competent bassist and drummer.  I also have experience as a sound engineer, having spent summers at '
+            a href: 'http://www.qdivisionstudios.com/index.html', target:'_blank' , "Q-Division Studios"
+            text ' and '
+            a href: 'http://www.wellspringsound.com/', target:'_blank' , "Wellspring Sound"
+            text ', and am hoping to make a living as either a sound engineer, a producer, or a performer (or some combination).  If you are interested in getting in contact with me, you can email me at '
+            a href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
+          
+          div class: 'clear-both', ->

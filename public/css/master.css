@@ -288,8 +288,8 @@ ul.project-list li {
 
 img.inline-image {
   display: block;
-  float: right;
-  margin-right: 10px;
+  float: left;
+  margin: 20px;
 }
 
 .songTitle {
@@ -311,10 +311,10 @@ div.songsContainer {
   padding: 0 10px 10px 10px;
 }
 
-div.musicCollection {
+div.indentedSection {
   padding-left: 20px;
 }
 
-div.collectionDesc {
+div.textPadding {
   padding: 0px 10px 10px;
 }
