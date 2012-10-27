@@ -331,8 +331,8 @@ div.spaceDiv {
 @media handheld and (max-width: 720px), screen and (max-device-width: 720px) {
 
   body {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 36px;
   }
  
   div#main-content {
@@ -348,16 +348,17 @@ div.spaceDiv {
   }
 
   div#page-title {
+    float: none;
     font-size: 52px;
   }
 
-  a.navButton {
-    font-size: 48px;
-    padding: 0 10px;
+  div#nav {
+    display: none;
   }
 
   div#info-bar {
     padding: 20px;
+    text-align: center;
   }
 
   ul.project-list li {
@@ -380,6 +381,7 @@ div.spaceDiv {
   .jp-type-single {
     width: auto;
     max-width: 1000px;
+    padding-left: 20px;
   }
 
   .jp-volume-bar,
