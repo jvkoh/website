@@ -66,59 +66,193 @@ app.listen(3000);
 //**********************************
 // Music
 //**********************************
+
+// Misc Live Tracks
+var threeFour = {
+  title: '3-4',
+};
+var hats = {
+  title: 'Hats',
+  img: '/images/Graffiti7.jpeg',
+};
+var brushedCanvas = {
+  title: 'Brushed Canvas',
+};
+var colorsOnceFaded = {
+  title: 'Colors Once Faded',
+};
+var funkJam = {
+  title: 'Funk Jam',
+};
+var hitIt = {
+  title: 'Hit It',
+};
+var underPressure = {
+  title: 'Under Pressure',
+};
+var wayOfDrum = {
+  title: 'Way of Drum',
+};
+
+// Electro Funk
 var intermezzo = {
-    title: 'Intermezzo'
-};
-var allAroundTheWorld = {
-    title: 'All Around The World',
-    alt: 'Theopilius London Remix for his contest',
-    soundCloudTitle: 'all-around-the-world'
-};
-var floatInTheOcean  = {
-    title: 'Float In The Ocean',
-    img: '/images/floatintheocean.jpg',
-    soundCloudTitle: ''
-};
-var mozart  = {
-    title: 'Mozart',
-    img: '/images/mozart.gif'
+  title: 'Intermezzo',
+  img: '/images/Graffiti8.jpeg',
 };
 var heartbreaker  = {
-    title: 'HeartBreaker',
-    img: '/images/heartbreaker.jpg'
-};
-var beatboxjam  = {
-    title: 'Beat Box Jam',
-    soundCloudTitle: 'beat-box-jam'
+  title: 'Heartbreaker',
+  img: '/images/Graffiti9.jpeg',
 };
 var venus  = {
-    title: 'Venus',
-    img: '/images/venus.jpg'
+  title: 'Venus',
+};
+var beatTheClock  = {
+  title: 'Beat The Clock',
+  alt: 'Ableton Beat The Clock Remix',
+};
+
+// Misc Beats
+var beatBoxJam  = {
+  title: 'Beat Box Jam',
+  img: '/images/Graffiti5.jpeg',
+};
+var airports  = {
+  title: 'Airports',
+};
+var allINeed = {
+  title: 'All I Need',
+};
+var comeGetToThis  = {
+  title: 'Come Get To This',
+};
+var love = {
+  title: 'Love',
+};
+var bach = {
+  title: 'Bach',
+};
+
+// Virion
+var incubation  = {
+  title: 'Incubation',
+};
+var infection = {
+  title: 'Infection',
+};
+var infiltration  = {
+  title: 'Infiltration',
+};
+var invasion = {
+  title: 'Invasion',
+};
+var menuMusic = {
+  title: 'Menu Music',
+};
+
+// Independant Study
+var askYou = {
+  title: 'Ask You',
+  img: '/images/Graffiti2.jpeg',
+};
+var nothingToSay = {
+  title: 'Nothing To Say',
+};
+
+// Album
+var armchairs = {
+  title: 'Armchairs',
+};
+var mrsBeats = {
+  title: 'Mrs Beats',
+}
+var spring = {
+  title: 'Spring',
+  img: '/images/Graffiti6.jpeg',
+};
+var allAroundTheWorld = {
+  title: 'All Around The World',
+  alt: 'Theopilius London Remix',
+  img: '/images/Graffiti3.jpeg',
+};
+var floatInTheOcean  = {
+  title: 'Float In The Ocean',
+  img: '/images/floatintheocean.jpg',
+  img: '/images/Graffiti4.jpeg',
+};
+var mozart  = {
+  title: 'Mozart',
 };
 var sometime  = {
-    title: 'Sometime',
-    img: '/images/sometime.jpg'
+  title: 'Sometime',
 };
+
+
 var homepageMusic = [
-  floatInTheOcean,
-  mozart,
+  askYou,
+  spring,
   allAroundTheWorld,
-  intermezzo,
   heartbreaker,
-  beatboxjam,
-  venus,
-  sometime
+  intermezzo,
+  floatInTheOcean,
+  beatBoxJam,
+  hats,
 ];
 
-var music2012 = [
-  venus,
-  sometime
-]
+var miscLive = [
+  threeFour,
+  brushedCanvas,
+  colorsOnceFaded,
+  funkJam,
+  hats,
+  hitIt,
+  underPressure,
+  wayOfDrum
+];
+
+var electroFunk = [
+  beatTheClock,
+  heartbreaker,
+  intermezzo,
+  venus
+];
+
+var miscBeats = [
+  airports,
+  allINeed,
+  bach,
+  beatBoxJam,
+  comeGetToThis,
+  love
+];
+
+var virion = [
+  incubation,
+  infection,
+  infiltration,
+  invasion,
+  menuMusic
+];
+
+var musicalStudies = [
+  askYou,
+  nothingToSay
+];
+
+var forBeatsSake = [
+  allAroundTheWorld,
+  armchairs,
+  floatInTheOcean,
+  mozart,
+  mrsBeats,
+  sometime,
+  spring
+];
+
 
 // Helper functions to add default locations of things
 // Remove spaces and make lowercase to get title used in files
 var makeShortTitle = function(title) {
-  shortTitle = title.replace(/\s/g, "");
+  shortTitle = title.replace(/\s/g, "-");
   shortTitle = shortTitle.toLowerCase();
   return shortTitle;
 };
@@ -144,17 +278,17 @@ var addSongInfo = function(songs) {
 
     // empty means no soundcloud
     // Don't set twice
-    if (song.soundCloudUrl != '' && !song.soundCloudUrl) {
-      if (song.soundCloudTitle) {
-        song.soundCloudUrl = song.soundCloudTitle;
-      } else {
-        //Default to shortTitle
-        if (!song.soundCloudUrl) {
-          song.soundCloudUrl = shortTitle;
-        }
-      }
-      song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
-    }
+//    if (song.soundCloudUrl != '' && !song.soundCloudUrl) {
+//      if (song.soundCloudTitle) {
+//        song.soundCloudUrl = song.soundCloudTitle;
+//      } else {
+//        //Default to shortTitle
+//        if (!song.soundCloudUrl) {
+//          song.soundCloudUrl = shortTitle;
+//        }
+//      }
+//      song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
+//    }
     if (!song.alt) {
       song.alt = song.title;
     }
@@ -163,7 +297,12 @@ var addSongInfo = function(songs) {
 
 addImages(homepageMusic);
 addSongInfo(homepageMusic);
-addSongInfo(music2012);
+addSongInfo(miscLive);
+addSongInfo(electroFunk);
+addSongInfo(miscBeats);
+addSongInfo(virion);
+addSongInfo(musicalStudies);
+addSongInfo(forBeatsSake);
 
 
 //**********************************
@@ -173,6 +312,11 @@ app.get('/', function(req, res) {
   res.render('welcome', {
     isDevelopment: IS_LOCAL_MACHINE, 
     homepageMusic: homepageMusic,
-    music2012: music2012
+    miscLive: miscLive,
+    electroFunk: electroFunk,
+    miscBeats: miscBeats,
+    virion: virion,
+    musicalStudies: musicalStudies,
+    forBeatsSake: forBeatsSake,
   });
 });

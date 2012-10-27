@@ -88,31 +88,104 @@ html ->
     div id: 'main-bg-wrapper', ->
       div id: 'main-bg-image', ->
 
+    ## MAIN CONTENT ##
     div id: 'main-content', ->
 
+      ## HOME PAGE ##
       div id: 'homePage', ->
         div id: 'home', class: 'link-target', ->
         div class: 'box', ->
           h2 "Welcome"
           p "I am a 21 year old guitarist/multi-instrumentalist.  I have an affinity for computers and work as a recording engineer/producer.  This is a showcase of some of my work.  I hope you enjoy listening."
-
-          h2 ->
-            text "Musical Highlights"
+          ## MUSIC HIGHLIGHTS ##
+          h2 "Musical Highlights"
           ul class: 'project-list', ->
             for song in @homepageMusic
-              li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, soundCloudUrl: song.soundCloudUrl, ->
+              li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, ->
                 img src: song.img, title: song.alt
-                div class: 'songTitle', ->
+                div ->
                   text song.title
           div class: 'clear-both', ->
 
+      ## MUSIC PAGE ##
+      div id: 'musicPage', ->
+        div id: 'music', class: 'link-target', ->
+        div class: 'box', ->
+          h2 "Music"
 
+          ## ALBUM ##
+          div class: 'musicCollection', ->
+            h3 "For Beats Sake"
+            div class: 'songsContainer', ->
+              for song in @forBeatsSake
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+            
+          ## ELECTROFUNK ##
+          div class: 'musicCollection', ->
+            h3 "ElectroFunk"
+            div class: 'songsContainer', ->
+              for song in @electroFunk
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+
+          ## LIVE TRACKS ##
+          div class: 'musicCollection', ->
+            h3 "Misc Live Tracks"
+            div class: 'songsContainer', ->
+              for song in @miscLive
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+            
+          ## MISC BEATS ##
+          div class: 'musicCollection', ->
+            h3 "Misc Beats"
+            div class: 'songsContainer', ->
+              for song in @miscBeats
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+
+          ## VIRION ##
+          div class: 'musicCollection', ->
+            h3 "Viron Music"
+            div class: 'songsContainer', ->
+              for song in @virion
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+            
+          ## MUSICAL STUDIES ##
+          div class: 'musicCollection', ->
+            h3 "Musical Studies Compositions"
+            div class: 'songsContainer', ->
+              for song in @musicalStudies
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'collectionDesc', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college.  MUSC1200 is a recording studio class that I took during the spring of my freshman year."
+            div class: 'clear-both', ->
+
+      ## ABOUT PAGE ##
       div id: 'aboutPage', ->
         div id: 'about' , class: 'link-target', ->
         div class: 'box', ->
           h2 ->
             text "About"
-          p -> 
+          p ->
             img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'200px', ->
             text 'Currently pursuing a Computer Music and Computer Science double major at Brown University, I spend my time away from classes primarily on my music.  While I am by no means striving to be a solo artist, I love playing music and understand the importance of being able to hold a groove in any sort of ensemble.'
           p "I am primarily a guitarist, but also a very competent bassist and drummer having played each for 10, 8, and 6 years respectively.  While I don't get to consistently practice drums at school I find that as all the more incentive to practice at home.  At school that time void can be easily filled with work on electronic music composition."
