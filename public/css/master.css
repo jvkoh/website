@@ -98,6 +98,7 @@ a.navButton {
   padding: 0 5px;
   text-decoration: none;
   color: #555;
+  z-index: 10;
 }
 
 #jplayerBar {
@@ -108,7 +109,7 @@ a.navButton {
   border-bottom: 4px #bbb solid;
   position: fixed;
   top: 44px;
-  z-index:2;
+  z-index:9;
 }
 .jp-type-single {
   width: 800px;
@@ -352,7 +353,6 @@ div.spaceDiv {
 
   a.navButton {
     font-size: 48px;
-    z-index: 10;
     padding: 0 10px;
   }
 
