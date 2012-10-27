@@ -259,14 +259,17 @@ ul.project-list {
 ul.project-list li {
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
   width: 200px;
   height: 200px;
   text-align: center;
 }
+ul.project-list a {
+  display: block;
+}
 .hovergallery img {
   height: 150px;
   width: 150px;
-  margin-left: 30px;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
@@ -274,7 +277,6 @@ ul.project-list li {
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   opacity: 0.7;
-  margin: 0 10px 5px 0;
 }
 .hovergallery img:hover {
   -webkit-transform: scale(1.1);
@@ -317,4 +319,87 @@ div.indentedSection {
 
 div.textPadding {
   padding: 0px 10px 10px;
+}
+
+div.spaceDiv {
+  height: 420px;
+}
+
+/* Mobile CSS */
+@media handheld, screen and (max-width: 500px) {
+
+  div#main-content {
+    margin-top: 125px;
+  }
+
+  div.link-target {
+    top: -125px;
+  }
+
+  .hovergallery img {
+    display:none;
+  }
+
+  ul.project-list li {
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    background-color: #0b1e3c;
+    padding: 5px 8px;
+    margin: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  .jp-volume-bar,
+  .jp-mute,
+  .jp-unmute,
+  .jp-volume-max {
+    display:none !important;
+  }
+
+  .jp-interface {
+    position: relative;
+    height: 60px;
+  }
+
+  .jp-controls li a {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 60px;
+  }
+  .jp-controls a.jp-play,
+  .jp-controls a.jp-pause {
+    width:60px;
+    background-image: url("/images/jplayer_play_m.jpg");
+  }
+  .jp-controls a.jp-pause {
+    background: transparent url("/images/jplayer_pause_m.jpg");
+  }
+  .jp-controls a.jp-play:hover {
+    background-image: url("/images/jplayer_play_m.jpg");
+  }
+  .jp-controls a.jp-pause:hover {
+    background: transparent url("/images/jplayer_pause_m.jpg");
+  }
+  .jp-controls a.jp-stop {
+    left: 70px;
+    width: 60px;
+    background: url("/images/jplayer_stop_m.jpg");
+  }
+  .jp-controls a.jp-stop:hover {
+    background-image: url("/images/jplayer_stop_m.jpg");
+  }
+
+  .jp-title {
+    top: -3px;
+    left: 30px;
+  }
+
+  .jp-title li {
+    font-size: 20px;
+  }
 }

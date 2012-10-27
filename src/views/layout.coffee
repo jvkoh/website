@@ -9,11 +9,11 @@ html ->
     #meta(name='viewport', content='width=640, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
     #meta name:'apple-mobile-web-app-capable', content:'yes'
 
-    script type: "text/javascript", src: "/js/libs/jquery.min.js"
-    script type: "text/javascript", src: "/js/libs/jquery.jplayer.min.js"
 
     # TODO: Add description, keywords, robots, author, favicon
     if @isDevelopment
+      script type: "text/javascript", src: "/js/libs/jquery.min.js"
+      script type: "text/javascript", src: "/js/libs/jquery.jplayer.min.js"
       link rel:"stylesheet", type:'text/css', href:"/css/master.css"
 
       # Application source 
@@ -216,3 +216,6 @@ html ->
             a href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
           
           div class: 'clear-both', ->
+
+      div class: 'spaceDiv', ->
+
