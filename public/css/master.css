@@ -72,7 +72,8 @@ div#header {
   padding: 10px 0 0;
   position: fixed;
   top: 0px;
-  z-index: 2;
+  z-index: 10;
+  text-align:center;
 }
 
 div#info-bar {
@@ -326,18 +327,37 @@ div.spaceDiv {
 }
 
 /* Mobile CSS */
-@media handheld, screen and (max-width: 500px) {
+@media handheld and (max-width: 720px), screen and (max-device-width: 720px) {
 
+  body {
+    font-size: 28px;
+    line-height: 32px;
+  }
+ 
   div#main-content {
-    margin-top: 125px;
+    margin-top: 160px;
   }
 
   div.link-target {
-    top: -125px;
+    top: -160px;
   }
 
   .hovergallery img {
     display:none;
+  }
+
+  div#page-title {
+    font-size: 52px;
+  }
+
+  a.navButton {
+    font-size: 48px;
+    z-index: 10;
+    padding: 0 10px;
+  }
+
+  div#info-bar {
+    padding: 20px;
   }
 
   ul.project-list li {
@@ -352,6 +372,16 @@ div.spaceDiv {
     cursor: pointer;
   }
 
+  #jplayerBar {
+    top: 85px;
+    border-bottom: 8px #BBB solid;
+  }
+
+  .jp-type-single {
+    width: auto;
+    max-width: 1000px;
+  }
+
   .jp-volume-bar,
   .jp-mute,
   .jp-unmute,
@@ -361,7 +391,7 @@ div.spaceDiv {
 
   .jp-interface {
     position: relative;
-    height: 60px;
+    height: 80px;
   }
 
   .jp-controls li a {
@@ -369,11 +399,11 @@ div.spaceDiv {
     margin: 0;
     padding: 0;
     width: 200px;
-    height: 60px;
+    height: 80px;
   }
   .jp-controls a.jp-play,
   .jp-controls a.jp-pause {
-    width:60px;
+    width:80px;
     background-image: url("/images/jplayer_play_m.jpg");
   }
   .jp-controls a.jp-pause {
@@ -387,7 +417,7 @@ div.spaceDiv {
   }
   .jp-controls a.jp-stop {
     left: 70px;
-    width: 60px;
+    width: 80px;
     background: url("/images/jplayer_stop_m.jpg");
   }
   .jp-controls a.jp-stop:hover {
@@ -395,11 +425,25 @@ div.spaceDiv {
   }
 
   .jp-title {
-    top: -3px;
-    left: 30px;
+    top: 3px;
+    left: 250px;
   }
 
   .jp-title li {
-    font-size: 20px;
+    font-size: 36px;
   }
+
+  .jp-time-holder {
+    display: none;
+  }
+
+  div.spaceDiv {
+    display: none;
+  }
+  
+  div.box {
+    padding: 25px;
+  }
+
 }
+
