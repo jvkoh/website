@@ -336,11 +336,11 @@ div.spaceDiv {
   }
  
   div#main-content {
-    margin-top: 175px;
+    margin-top: 170px;
   }
 
   div.link-target {
-    top: -175px;
+    top: -170px;
   }
 
   .hovergallery img {
@@ -365,12 +365,18 @@ div.spaceDiv {
     width: auto;
     height: auto;
     display: block;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #0b1e3c;
-    padding: 5px 8px;
-    margin: 0 5px 5px 0;
+    padding: 10px 15px;
+    margin: 0 15px 15px 0;
     color: white;
     cursor: pointer;
+  }
+
+  .songTitle {
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 15px 15px 0;
   }
 
   #jplayerBar {
@@ -418,7 +424,7 @@ div.spaceDiv {
     background: transparent url("/images/jplayer_pause_m.jpg");
   }
   .jp-controls a.jp-stop {
-    left: 70px;
+    left: 90px;
     width: 80px;
     background: url("/images/jplayer_stop_m.jpg");
   }
@@ -428,7 +434,7 @@ div.spaceDiv {
 
   .jp-title {
     top: 3px;
-    left: 250px;
+    left: 270px;
   }
 
   .jp-title li {

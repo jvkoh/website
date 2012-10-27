@@ -19,7 +19,7 @@ html ->
       # Application source 
       script type:"text/javascript", src:"/js/main.js"
 
-    if !@isDevelopment 
+    if !@isDevelopment
       link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"
       script type: 'text/javascript', src: '/release/javascript.min.js'
 
@@ -116,8 +116,9 @@ html ->
         div class: 'box', ->
           h2 "Welcome"
           p "I am a 21 year old guitarist/multi-instrumentalist.  I have an affinity for computers and work as a recording engineer/producer.  This is a showcase of some of my work.  I hope you enjoy listening."
+          p "Click a song title to listen!"
           ## MUSIC HIGHLIGHTS ##
-          h2 "Musical Highlights"
+          h2 "Highlighted Music"
           ul class: 'project-list', ->
             for song in @homepageMusic
               li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, ->
