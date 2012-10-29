@@ -42,7 +42,7 @@ div.box {
 div#main-bg-wrapper {
   position: fixed;
   width: 100%;
-  top: 130px;
+  top: 330px;
   z-index: -1;
 }
 
