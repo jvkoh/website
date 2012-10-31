@@ -42,8 +42,14 @@ div.box {
 div#main-bg-wrapper {
   position: fixed;
   width: 100%;
-  top: 330px;
+  top: 120px;
   z-index: -1;
+}
+
+div.divider {
+  width: 90%;
+  border-top: solid 1px #999999;
+  margin: 10px auto 20px;
 }
 
 .link-target {
@@ -337,6 +343,10 @@ div.spaceDiv {
  
   div#main-content {
     margin-top: 170px;
+  }
+
+  div#main-bg-wrapper {
+    top: 330px;
   }
 
   div.link-target {

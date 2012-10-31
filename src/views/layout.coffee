@@ -116,7 +116,7 @@ html ->
         div class: 'box', ->
           h2 "Welcome"
           p "I am a 21 year old guitarist/multi-instrumentalist.  I have an affinity for computers and work as a recording engineer/producer.  This is a showcase of some of my work.  I hope you enjoy listening."
-          p "Click a song title to listen!"
+          div class: 'divider', ->
           ## MUSIC HIGHLIGHTS ##
           h2 "Highlighted Music"
           ul class: 'project-list', ->
@@ -132,6 +132,7 @@ html ->
         div id: 'music', class: 'link-target', ->
         div class: 'box', ->
           h2 "Music"
+          p "Click a song title to listen!"
 
           ## ALBUM ##
           div class: 'indentedSection', ->
@@ -141,8 +142,10 @@ html ->
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'textPadding', "For Beats Sake is my first album.  It should be finished and released sometime by the end of the year.  These are a few of the tracks that are going into the album.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
+            div class: 'textPadding', "For Beats Sake is my first full album.  It should be finished and released sometime by the end of the year.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
             div class: 'clear-both', ->
+
+          div class: 'divider', ->
             
           ## ELECTROFUNK ##
           div class: 'indentedSection', ->
@@ -155,17 +158,8 @@ html ->
             div class: 'textPadding', "These are all largely digital tracks made through a combination of sampling techniques, synthesizers, and funk bass and guitar.  The result is in my mind somewhere between dance music, electro, and funk.  Beat the Clock is a remix I made for the ableton \'Beat the Clock\' remix contest, a contest where the song must be completed using ableton live in less than 24 hours."
             div class: 'clear-both', ->
 
-          ## LIVE TRACKS ##
-          div class: 'indentedSection', ->
-            h3 "Misc Live Tracks"
-            div class: 'songsContainer', ->
-              for song in @miscLive
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
-              div class: 'clear-both', ->
-            div class: 'textPadding', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college." 
-            div class: 'clear-both', ->
-            
+          div class: 'divider', ->
+
           ## MUSICAL STUDIES ##
           div class: 'indentedSection', ->
             h3 "Academic Compositions"
@@ -177,6 +171,21 @@ html ->
             div class: 'textPadding', "These are tracks I have made for various classes."
             div class: 'clear-both', ->
 
+          div class: 'divider', ->
+
+          ## LIVE TRACKS ##
+          div class: 'indentedSection', ->
+            h3 "Misc Live Tracks"
+            div class: 'songsContainer', ->
+              for song in @miscLive
+                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
+                  text song.title
+              div class: 'clear-both', ->
+            div class: 'textPadding', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college."
+            div class: 'clear-both', ->
+
+          div class: 'divider', ->
+
           ## MISC BEATS ##
           div class: 'indentedSection', ->
             h3 "Misc Beats"
@@ -187,6 +196,8 @@ html ->
               div class: 'clear-both', ->
             div class: 'textPadding', "This is a collection of beats I've made over the past few years since I started making them at the end of my sophomore year of college."
             div class: 'clear-both', ->
+
+          div class: 'divider', ->
 
           ## VIRION ##
           div class: 'indentedSection', ->

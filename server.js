@@ -95,9 +95,12 @@ var wayOfDrum = {
 };
 
 // Electro Funk
+var discoJams = {
+  title: 'Disco Jams',
+  img: '/images/Graffiti8.jpeg',
+}
 var intermezzo = {
   title: 'Intermezzo',
-  img: '/images/Graffiti8.jpeg',
 };
 var heartbreaker  = {
   title: 'Heartbreaker',
@@ -159,41 +162,61 @@ var nothingToSay = {
 };
 
 // Album
-var armchairs = {
-  title: 'Armchairs',
+var subwayFunk = {
+  title: 'Subway Funk',
+}
+var bodySoul = {
+  title: 'Body and Soul',
+  img: '/images/Graffiti4.jpeg',
+}
+var theDankness = {
+  title: 'The Dankness',
+}
+var floatInTheOcean  = {
+  title: 'Float In The Ocean',
 };
-var mrsBeats = {
-  title: 'Mrs Beats',
+var mischief = {
+  title: 'Mischief',
+}
+var ponds = {
+  title: 'Ponds',
+}
+var salaBim = {
+  title: 'SalaBim',
+  img: '/images/Graffiti3.jpeg',
 }
 var spring = {
   title: 'Spring',
   img: '/images/Graffiti6.jpeg',
 };
+var angelEyes = {
+  title: 'Angel Eyes',
+}
 var allAroundTheWorld = {
   title: 'All Around The World',
   alt: 'Theopilius London Remix',
-  img: '/images/Graffiti3.jpeg',
-};
-var floatInTheOcean  = {
-  title: 'Float In The Ocean',
-  img: '/images/floatintheocean.jpg',
-  img: '/images/Graffiti4.jpeg',
-};
-var mozart  = {
-  title: 'Mozart',
 };
 var sometime  = {
   title: 'Sometime',
 };
+var mrsBeats = {
+  title: 'Mrs Beats',
+}
+var armchairs = {
+  title: 'Armchairs',
+};
+var mozart  = {
+  title: 'Mozart',
+};
 
 
 var homepageMusic = [
-  askYou,
+  bodySoul,
+  discoJams,
   spring,
-  allAroundTheWorld,
   heartbreaker,
-  intermezzo,
-  floatInTheOcean,
+  askYou,
+  salaBim,
   beatBoxJam,
   hats,
 ];
@@ -210,10 +233,11 @@ var miscLive = [
 ];
 
 var electroFunk = [
-  beatTheClock,
+  discoJams,
   heartbreaker,
   intermezzo,
-  venus
+  venus,
+  beatTheClock
 ];
 
 var miscBeats = [
@@ -239,13 +263,20 @@ var musicalStudies = [
 ];
 
 var forBeatsSake = [
-  allAroundTheWorld,
-  armchairs,
+  subwayFunk,
+  bodySoul,
+  theDankness,
   floatInTheOcean,
-  mozart,
-  mrsBeats,
+  mischief,
+  ponds,
+  salaBim,
+  spring,
+  angelEyes,
+  allAroundTheWorld,
   sometime,
-  spring
+  mrsBeats,
+  armchairs,
+  mozart,
 ];
 
 

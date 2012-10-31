@@ -1,7 +1,7 @@
 {
   "name": "jvkoh",
   "description": "Jonathan Koh's Music site",
-  "version": "1.0.2",
+  "version": "1.0.2-1",
   "author": "Varun Singh <Varun_Singh@brown.edu>",
   "main": "server.js",
   "scripts": {
