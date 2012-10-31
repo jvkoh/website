@@ -8,6 +8,8 @@
   src: url("/fonts/ahg/AlteHaasGroteskBold.ttf") format('truetype');
 }
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 div.clear-both
 {
   clear:both;
@@ -15,7 +17,7 @@ div.clear-both
 
 body {
   background-color: #eef3fa;
-  font-family: "Alte Haas Grotesk", Sans-Serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
