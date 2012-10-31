@@ -463,5 +463,9 @@ div.spaceDiv {
     padding: 25px;
   }
 
+  div.divider {
+    margin: 20px auto 30px;
+  }
+
 }
 
