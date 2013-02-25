@@ -26,8 +26,26 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #0b1f3d;
+  font-weight: bold;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a.text-link:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #5b6f8d;
+}
+
 h2 {
-  margin: 0px;
+ margin: 0px;
 }
 
 p {
@@ -240,7 +258,7 @@ a.navButton {
 .jp-no-solution {
   text-align: center;
   width: 100%;
-  font-size: 1px;
+  font-size: 12px;
 }
 .jp-no-solution a {
   color: #eee;
@@ -311,7 +329,7 @@ img.inline-image {
   background-color: #0b1e3c;
   padding: 5px 8px;
   margin: 0 5px 5px 0;
-  color: white;
+  color: white; !important 
   cursor: pointer;
 }
 
@@ -357,6 +375,10 @@ div.spaceDiv {
 
   .hovergallery img {
     display:none;
+  }
+
+  div.mobile-white-link {
+    color: white;
   }
 
   div#page-title {

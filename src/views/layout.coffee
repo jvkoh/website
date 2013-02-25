@@ -9,35 +9,36 @@ html ->
     #meta(name='viewport', content='width=640, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
     #meta name:'apple-mobile-web-app-capable', content:'yes'
 
+    text '''
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35896590-1']);
+        _gaq.push(['_setDomainName', 'jvkoh.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+         '''
 
     # TODO: Add description, keywords, robots, author, favicon
+
     if @isDevelopment
-      script type: "text/javascript", src: "/js/libs/jquery.min.js"
-      script type: "text/javascript", src: "/js/libs/jquery.jplayer.min.js"
       link rel:"stylesheet", type:'text/css', href:"/css/master.css"
 
       # Application source 
+      script type: "text/javascript", src: "/js/libs/jquery.min.js"
+      script type: "text/javascript", src: "/js/libs/jquery.jplayer.min.js"
       script type:"text/javascript", src:"/js/main.js"
 
     if !@isDevelopment
       link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"
       script type: 'text/javascript', src: '/release/javascript.min.js'
-
-    text '''
-      <script type='text/javascript'>
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35896590-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-      </script>
-         '''
 
 
   body ->
@@ -115,6 +116,13 @@ html ->
         div id: 'home', class: 'link-target', ->
         div class: 'box', ->
           h2 "Welcome"
+          p ->
+            b "News: "
+            text "I just released an album.  The album is called \"For Beats\' Sake\" by Lazy Rabbit.  You can download it "
+            a class: 'text-link', href: 'https://www.dropbox.com/sh/eguu1u3wdr5nuus/Jkv333lu3a', 'here'
+            text " or from the "
+            a class: 'text-link', href: 'http://lazyrabbit.bandcamp.com', "Lazy Rabbit Bandcamp"
+            text "."
           p "I am a 21 year old guitarist/multi-instrumentalist.  I have an affinity for computers and work as a recording engineer/producer.  This is a showcase of some of my work.  I hope you enjoy listening."
           div class: 'divider', ->
           ## MUSIC HIGHLIGHTS ##
@@ -123,7 +131,7 @@ html ->
             for song in @homepageMusic
               li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, ->
                 img src: song.img, title: song.alt
-                div ->
+                div class: 'mobile-white-link', ->
                   text song.title
           div class: 'clear-both', ->
 
@@ -134,15 +142,17 @@ html ->
           h2 "Music"
           p "Click a song title to listen!"
 
-          ## ALBUM ##
+          ## FOR BEATS SAKE ##
           div class: 'indentedSection', ->
-            h3 "For Beats Sake"
+            h3 ->
+              text "For Beats Sake - "
+              a class: 'text-link', href: 'https://www.dropbox.com/sh/eguu1u3wdr5nuus/Jkv333lu3a', 'Download Album'
             div class: 'songsContainer', ->
               for song in @forBeatsSake
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'textPadding', "For Beats Sake is my first full album.  It should be finished and released sometime by the end of the year.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
+            div class: 'textPadding', "For Beats Sake is my first full album.  It was released Januray 3rd of 2013.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
             div class: 'clear-both', ->
 
           div class: 'divider', ->
@@ -181,7 +191,7 @@ html ->
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'textPadding', "This a set of jazz/funk tracks that were largely improvised one instrument at a time.  Most commonly I recorded the drums first, followed by bass and then guitars.  Recorded mostly during the summer after my freshman year in college."
+            div class: 'textPadding', "This a set of jazz/funk tracks that I improvised one instrument at a time.  These were recorded during the summer after my freshman year in college."
             div class: 'clear-both', ->
 
           div class: 'divider', ->
@@ -194,7 +204,7 @@ html ->
                 a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
                   text song.title
               div class: 'clear-both', ->
-            div class: 'textPadding', "This is a collection of beats I've made over the past few years since I started making them at the end of my sophomore year of college."
+            div class: 'textPadding', "This is a set of beats that I made in Ableton Live the summer after my sophomore year in college."
             div class: 'clear-both', ->
 
           div class: 'divider', ->

@@ -30,6 +30,7 @@ playSong = (songUrl, songTitle, soundCloudUrl, dontStartPlaying) ->
   setSoundCloudLink(soundCloudUrl)
 
 $('.playableSong').click((e) ->
+  e.preventDefault()
   songDiv = $(this)
   songUrl = songDiv.attr('url')
   songTitle = songDiv.attr('title')

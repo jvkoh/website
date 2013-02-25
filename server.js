@@ -172,7 +172,7 @@ var bodySoul = {
 var theDankness = {
   title: 'The Dankness',
 }
-var floatInTheOcean  = {
+var floatInTheOcean = {
   title: 'Float In The Ocean',
 };
 var mischief = {
@@ -196,7 +196,7 @@ var allAroundTheWorld = {
   title: 'All Around The World',
   alt: 'Theopilius London Remix',
 };
-var sometime  = {
+var sometime = {
   title: 'Sometime',
 };
 var mrsBeats = {
@@ -205,8 +205,12 @@ var mrsBeats = {
 var armchairs = {
   title: 'Armchairs',
 };
-var mozart  = {
+var mozart = {
   title: 'Mozart',
+};
+var bodySoulReprise = {
+  title: 'Body and Soul (Reprise)',
+  short_title: 'body-and-soul-reprise',
 };
 
 
@@ -277,6 +281,7 @@ var forBeatsSake = [
   mrsBeats,
   armchairs,
   mozart,
+  bodySoulReprise,
 ];
 
 
@@ -301,7 +306,11 @@ var addSongInfo = function(songs) {
   songs.forEach(function(song) {
     //if !addedSongs[song.title]
     //addedSongs[song.title] = true
-    var shortTitle = makeShortTitle(song.title);
+    if (song.short_title) {
+      var shortTitle = song.short_title;
+    } else {
+      var shortTitle = makeShortTitle(song.title);
+    }
     //song.url = '/music/' + shortTitle + '.mp3' if !song.url
     if (!song.url) {
       song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3';
