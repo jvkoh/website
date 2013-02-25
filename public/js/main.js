@@ -43,6 +43,7 @@ $(function() {
 
   $('.playableSong').click(function(e) {
     var songDiv, songTitle, songUrl, soundCloudUrl;
+    e.preventDefault();
     songDiv = $(this);
     songUrl = songDiv.attr('url');
     songTitle = songDiv.attr('title');
@@ -62,4 +63,4 @@ $(function() {
     return $('#jp-no-solution-wrapper').show();
   }, 5000);
 
-});
+}).call(this);

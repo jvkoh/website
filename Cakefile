@@ -12,7 +12,7 @@ task 'coffee:compile', 'Compiles coffee files', ->
 # 
 task 'watch', 'watches for changes in source files', ->
   # Compile all on startup
-  console.log("compiling...");
+  console.log("compiling...")
   invoke 'coffee:compile'
 
   console.log("Watching files")
@@ -25,6 +25,6 @@ task 'watch', 'watches for changes in source files', ->
 
 task 'build', 'rebuilds source files', ->
   # Compile all files
-  console.log("compiling...");
+  console.log("compiling...")
   invoke 'coffee:compile'
 
