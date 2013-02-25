@@ -322,18 +322,22 @@ img.inline-image {
   margin: 20px;
 }
 
-.songTitle {
+div.hoverSong {
+  color: #0b1f3d;
+}
+
+a.songTitle {
   float: left;
   display: block;
   border-radius: 5px;
   background-color: #0b1e3c;
   padding: 5px 8px;
   margin: 0 5px 5px 0;
-  color: white; !important 
+  color: white;
   cursor: pointer;
 }
 
-.songTitle:hover {
+a.songTitle:hover {
   background-color: #3b3e5c;
 }
 

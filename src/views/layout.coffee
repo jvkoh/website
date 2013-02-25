@@ -131,7 +131,7 @@ html ->
             for song in @homepageMusic
               li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, ->
                 img src: song.img, title: song.alt
-                div class: 'mobile-white-link', ->
+                div class: 'mobile-white-link hoverSong', ->
                   text song.title
           div class: 'clear-both', ->
 
