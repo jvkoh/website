@@ -360,3 +360,7 @@ app.get('/', function(req, res) {
     forBeatsSake: forBeatsSake,
   });
 });
+
+app.get('/*', function(req, res) {
+  res.redirect('/');
+});
