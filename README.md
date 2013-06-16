@@ -22,4 +22,4 @@ Coffeescript is in src/js/
 Html (written on coffeecup) is in src/views/
 CSS is all located in public/css/master.css
 
-Thanks to Varun, for setting this whole thing up and helping me understand it all.
+Thanks to Varun for his guidance.
