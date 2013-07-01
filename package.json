@@ -1,7 +1,7 @@
 {
   "name": "jvkoh",
   "description": "Jonathan Koh's Music site",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "Varun Singh <Varun_Singh@brown.edu>",
   "main": "server.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vjsingh/vjsingh"
+    "url": "https://github.com/jvkoh/jvkoh"
   },
   "dependencies": {
     "express": "2.5.x",

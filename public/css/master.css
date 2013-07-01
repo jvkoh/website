@@ -74,7 +74,7 @@ div.divider {
 
 .link-target {
   position: relative;
-  top: -90px;
+  top: -60px;
 }
 
 div#main-bg-image {
@@ -89,33 +89,40 @@ div#main-content {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 90px;
+  margin-top: 60px;
 } 
 
 div#header {
   width: 100%;
-  background-color: #fff;
   padding: 10px 0 0;
+  height: 40px;
   position: fixed;
   top: 0px;
   z-index: 10;
   text-align:center;
+  background: -webkit-gradient( linear, left top, left bottom, from(rgb(29, 62, 100)), to(rgb(12,30,51)));
+  -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
 }
 
 div#info-bar {
-  max-width: 1000px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2px;
   padding: 0 0 10px;
 }
 
 div#page-title {
   font-size: 24px;
-  float: left;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  color: #fff;
 }
 
 div#nav {
-  float: right;
+  width: 200px;
+  display: inline-block;
 }
 
 a.navButton {
@@ -123,20 +130,17 @@ a.navButton {
   font-size: 16px;
   padding: 0 5px;
   text-decoration: none;
-  color: #555;
+  color: #fff;
   z-index: 10;
 }
 
 #jplayerBar {
   color: #fff;
-  background-color: #0b1e3c;
-  width: 100%;
-  padding: 4px 0;
-  border-bottom: 4px #bbb solid;
-  position: fixed;
-  top: 44px;
-  z-index:9;
+  width: 550px;
+  padding: 0 0 0 50px;
+  display: inline-block;
 }
+
 .jp-type-single {
   width: 800px;
   margin-left: auto;
@@ -146,14 +150,17 @@ a.navButton {
 .jp-interface {
   position: relative;
   height: 20px;
+  width: 550px;
+  top: 2px;
 }
 .jp-title {
   position: relative;
   top: -29px;
-  left: 200px;
-  width: 400px;
+  left: 160px;
+  width: 220px;
   display: block !important;
   text-align: center;
+  font-weight: bold;
 }
 .jp-title ul {
   list-style-type: none;
@@ -173,7 +180,7 @@ a.navButton {
   margin: 0;
   padding: 0;
   position: relative;
-  width: 200px;
+  width: 160px;
   height: 20px;
 }
 .jp-controls li {
@@ -209,7 +216,7 @@ a.navButton {
   background: transparent url("/images/jplayer_play_hover.jpg") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-stop {
-  left: 30px;
+  left: 22px;
   width: 20px;
   background: transparent url("/images/jplayer_stop.jpg") no-repeat scroll 0 0;
 }
@@ -219,7 +226,7 @@ a.navButton {
 .jp-controls a.jp-mute,
 .jp-controls a.jp-unmute {
   top: 1px;
-  left: 60px;
+  left: 45px;
   width: 20px;
   background: transparent url("/images/jplayer_mute.jpg") no-repeat scroll 0 0;
 }
@@ -229,7 +236,7 @@ a.navButton {
 }
 .jp-controls a.jp-volume-max {
   top: 1px;
-  left: 140px;
+  left: 125px;
   width: 30px;
   background: transparent url("/images/jplayer_maxvol.jpg") no-repeat scroll 0 0;
 }
@@ -238,7 +245,7 @@ a.navButton {
 }
 .jp-volume-bar {
   top: -13px;
-  left: 85px;
+  left: 70px;
   height: 8px;
   width: 54px;
   background: #fff;
@@ -265,20 +272,21 @@ a.navButton {
 }
 .jp-time-holder {
   top: -48px;
-  left: 650px;
+  left: 380px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: relative;
-  width: 200px;
+  width: 120px;
   height: 20px;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
+  font-weight: bold;
 }
 .jp-current-time,
 .jp-duration {
   display: inline;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 ul.project-list {
