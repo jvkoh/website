@@ -204,44 +204,45 @@ a.navButton {
 .jp-controls a.jp-pause {
   width: 20px;
   top: 1px;
-  background: transparent url("/images/jplayer_play.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_play.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-pause {
-  background: transparent url("/images/jplayer_pause.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_pause.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-pause:hover {
-  background: transparent url("/images/jplayer_pause_hover.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_pause_hover.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-play:hover {
-  background: transparent url("/images/jplayer_play_hover.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_play_hover.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-stop {
+  top: 1px;
   left: 22px;
   width: 20px;
-  background: transparent url("/images/jplayer_stop.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_stop.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-stop:hover {
-  background: transparent url("/images/jplayer_stop_hover.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_stop_hover.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-mute,
 .jp-controls a.jp-unmute {
   top: 1px;
   left: 45px;
   width: 20px;
-  background: transparent url("/images/jplayer_mute.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_mute.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-mute:hover,
 .jp-controls a.jp-unmute:hover {
-  background: transparent url("/images/jplayer_mute_hover.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_mute_hover.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-volume-max {
   top: 1px;
   left: 125px;
   width: 30px;
-  background: transparent url("/images/jplayer_maxvol.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_maxvol.png") no-repeat scroll 0 0;
 }
 .jp-controls a.jp-volume-max:hover {
-  background: transparent url("/images/jplayer_maxvol_hover.jpg") no-repeat scroll 0 0;
+  background: transparent url("/images/jplayer_maxvol_hover.png") no-repeat scroll 0 0;
 }
 .jp-volume-bar {
   top: -13px;
