@@ -43,11 +43,16 @@ html ->
 
   body ->
 
+    div id: 'modalDim', ->
+
     div id: 'header', ->
 
       div id: "info-bar", ->
         div id: "page-title", ->
           text "Jonathan Koh"
+        div id: "nav", ->
+          a class: 'navButton aboutButton', href: '', ->
+            text 'About Me/Contact'
         div id: 'jplayerBar', ->
             div class: 'container', ->
               div id: 'jquery_jplayer_1', class: 'jp-jplayer'
@@ -94,150 +99,136 @@ html ->
                   </div>
                 </div>
             '''
-        div id: "nav", ->
-          a class: 'navButton', href: '#home', ->
-            text 'Home'
-          a class: 'navButton', href: '#music', ->
-            text 'Music'
-          a class: 'navButton', href: '#about', ->
-            text 'About'
         div class: "clear-both", ->
 
 
-      
+    ## Background Image ##  
     div id: 'main-bg-wrapper', ->
       div id: 'main-bg-image', ->
+
+    ## Contact Modal ##
+    div id: 'aboutContainer', ->
+      div id: 'aboutModal', ->
+        a href: '', class: 'aboutButton aboutClose', ->
+          text 'close [X]'
+        h2 "About"
+        img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'200px', ->
+        p ->
+          text 'Currently pursuing a Computer Music and Computer Science double major at Brown University, I spend my time away from classes primarily on my music.  While I am by no means striving to be a solo artist, I love playing music and understand the importance of being able to hold a groove in any sort of ensemble.  I am primarily a guitarist, but also am a very competent bassist and drummer.  I also have experience as a sound engineer, having spent summers at '
+          a href: 'http://www.qdivisionstudios.com/index.html', target:'_blank' , "Q-Division Studios"
+          text ' and '
+          a href: 'http://www.wellspringsound.com/', target:'_blank' , "Wellspring Sound"
+          text ', and am hoping to make a living as either a sound engineer, a producer, or a performer (or some combination).  If you are interested in getting in contact with me, you can email me at '
+          a href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
+        
+        div class: 'clear-both', ->
 
     ## MAIN CONTENT ##
     div id: 'main-content', ->
 
       ## HOME PAGE ##
       div id: 'homePage', ->
-        div id: 'home', class: 'link-target', ->
         div class: 'box', ->
           h2 "Welcome"
-          p ->
-            b "News: "
-            text "I just released an album.  The album is called \"For Beats\' Sake\" by Lazy Rabbit.  You can download it "
-            a class: 'text-link', href: 'https://www.dropbox.com/sh/eguu1u3wdr5nuus/Jkv333lu3a', 'here'
-            text " or from the "
-            a class: 'text-link', href: 'http://lazyrabbit.bandcamp.com', "Lazy Rabbit Bandcamp"
-            text "."
           p "I am a 21 year old guitarist/multi-instrumentalist.  I have an affinity for computers and work as a recording engineer/producer.  This is a showcase of some of my work.  I hope you enjoy listening."
-          div class: 'divider', ->
-          ## MUSIC HIGHLIGHTS ##
-          h2 "Highlighted Music"
-          ul class: 'project-list', ->
-            for song in @homepageMusic
-              li -> a class: 'playableSong hovergallery', href: '', url: song.url, title: song.title, ->
-                img src: song.img, title: song.alt
-                div class: 'mobile-white-link hoverSong', ->
-                  text song.title
+
           div class: 'clear-both', ->
 
       ## MUSIC PAGE ##
       div id: 'musicPage', ->
-        div id: 'music', class: 'link-target', ->
-        div class: 'box', ->
-          h2 "Music"
-          p "Click a song title to listen!"
 
-          ## FOR BEATS SAKE ##
+        ## FOR BEATS SAKE ##
+        div class: 'box', ->
+          h2 ->
+            text "For Beats Sake"
           div class: 'indentedSection', ->
-            h3 ->
-              text "For Beats Sake - "
-              a class: 'text-link', href: 'https://www.dropbox.com/sh/eguu1u3wdr5nuus/Jkv333lu3a', 'Download Album'
+            div class: 'textPadding', "For Beats Sake is my first full album.  It was released Januray 3rd of 2013.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
             div class: 'songsContainer', ->
               for song in @forBeatsSake
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
               div class: 'clear-both', ->
-            div class: 'textPadding', "For Beats Sake is my first full album.  It was released Januray 3rd of 2013.  The track All Around The World is a remix of the Theophilus London song, made for a remix contest of his."
             div class: 'clear-both', ->
-
-          div class: 'divider', ->
             
-          ## ELECTROFUNK ##
+        ## ELECTROFUNK ##
+        div class: 'box', ->
+          h2 "ElectroFunk"
           div class: 'indentedSection', ->
-            h3 "ElectroFunk"
+            div class: 'textPadding', "These are all largely digital tracks made through a combination of sampling techniques, synthesizers, and funk bass and guitar.  The result is in my mind somewhere between dance music, electro, and funk.  Beat the Clock is a remix I made for the ableton \'Beat the Clock\' remix contest, a contest where the song must be completed using ableton live in less than 24 hours."
             div class: 'songsContainer', ->
               for song in @electroFunk
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
               div class: 'clear-both', ->
-            div class: 'textPadding', "These are all largely digital tracks made through a combination of sampling techniques, synthesizers, and funk bass and guitar.  The result is in my mind somewhere between dance music, electro, and funk.  Beat the Clock is a remix I made for the ableton \'Beat the Clock\' remix contest, a contest where the song must be completed using ableton live in less than 24 hours."
             div class: 'clear-both', ->
 
-          div class: 'divider', ->
-
-          ## MUSICAL STUDIES ##
+        ## MUSICAL STUDIES ##
+        div class: 'box', ->
+          h2 "Academic Compositions"
           div class: 'indentedSection', ->
-            h3 "Academic Compositions"
+            div class: 'textPadding', "These are tracks I have made for various classes."
             div class: 'songsContainer', ->
               for song in @musicalStudies
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
               div class: 'clear-both', ->
-            div class: 'textPadding', "These are tracks I have made for various classes."
             div class: 'clear-both', ->
 
-          div class: 'divider', ->
-
-          ## LIVE TRACKS ##
+        ## LIVE TRACKS ##
+        div class: 'box', ->
+          h2 "Misc Live Tracks"
           div class: 'indentedSection', ->
-            h3 "Misc Live Tracks"
+            div class: 'textPadding', "This a set of jazz/funk tracks that I improvised one instrument at a time.  These were recorded during the summer after my freshman year in college."
             div class: 'songsContainer', ->
               for song in @miscLive
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
               div class: 'clear-both', ->
-            div class: 'textPadding', "This a set of jazz/funk tracks that I improvised one instrument at a time.  These were recorded during the summer after my freshman year in college."
             div class: 'clear-both', ->
 
-          div class: 'divider', ->
-
-          ## MISC BEATS ##
+        ## MISC BEATS ##
+        div class: 'box', ->
+          h2 "Misc Beats"
           div class: 'indentedSection', ->
-            h3 "Misc Beats"
+            div class: 'textPadding', "This is a set of beats that I made in Ableton Live the summer after my sophomore year in college."
             div class: 'songsContainer', ->
               for song in @miscBeats
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
               div class: 'clear-both', ->
-            div class: 'textPadding', "This is a set of beats that I made in Ableton Live the summer after my sophomore year in college."
             div class: 'clear-both', ->
 
-          div class: 'divider', ->
-
-          ## VIRION ##
+        ## VIRION ##
+        div class: 'box', ->
+          h2 "Viron Music"
           div class: 'indentedSection', ->
-            h3 "Viron Music"
-            div class: 'songsContainer', ->
-              for song in @virion
-                a class: 'playableSong songTitle', href: '', url: song.url, title: song.title, ->
-                  text song.title
-              div class: 'clear-both', ->
             div class: 'textPadding', ->
               text "This is the soundtrack that I made to the video game "
               a href: 'https://apps.facebook.com/viriongame/', target:'_blank' , "Virion"
               text ".  This is an arcade style game based on the human immune system and viruses, that I produced all the sound and music for.  Varun Singh and Jonah Kagan did a great job developing the game, and Charis Loke did amazing work with the art."
+            div class: 'songsContainer', ->
+              for song in @virion
+                a class: 'playableSong songContainer', href: '', url: song.url, title: song.title, ->
+                  img class: 'playButton', src: '/images/playbutton.png'
+                  div class: 'songTitle', ->
+                    song.title
+                  div class: 'clear-both'
+              div class: 'clear-both', ->
             div class: 'clear-both', ->
             
-      ## ABOUT PAGE ##
-      div id: 'aboutPage', ->
-        div id: 'about' , class: 'link-target', ->
-        div class: 'box', ->
-          h2 "About"
-          img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'200px', ->
-          p ->
-            text 'Currently pursuing a Computer Music and Computer Science double major at Brown University, I spend my time away from classes primarily on my music.  While I am by no means striving to be a solo artist, I love playing music and understand the importance of being able to hold a groove in any sort of ensemble.  I am primarily a guitarist, but also am a very competent bassist and drummer.  I also have experience as a sound engineer, having spent summers at '
-            a href: 'http://www.qdivisionstudios.com/index.html', target:'_blank' , "Q-Division Studios"
-            text ' and '
-            a href: 'http://www.wellspringsound.com/', target:'_blank' , "Wellspring Sound"
-            text ', and am hoping to make a living as either a sound engineer, a producer, or a performer (or some combination).  If you are interested in getting in contact with me, you can email me at '
-            a href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
-          
-          div class: 'clear-both', ->
-
-      div class: 'spaceDiv', ->
 

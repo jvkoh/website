@@ -73,7 +73,6 @@ var threeFour = {
 };
 var hats = {
   title: 'Hats',
-  img: '/images/Graffiti7.jpeg',
 };
 var brushedCanvas = {
   title: 'Brushed Canvas',
@@ -97,14 +96,12 @@ var wayOfDrum = {
 // Electro Funk
 var discoJams = {
   title: 'Disco Jams',
-  img: '/images/Graffiti8.jpeg',
 }
 var intermezzo = {
   title: 'Intermezzo',
 };
 var heartbreaker  = {
   title: 'Heartbreaker',
-  img: '/images/Graffiti9.jpeg',
 };
 var venus  = {
   title: 'Venus',
@@ -117,7 +114,6 @@ var beatTheClock  = {
 // Misc Beats
 var beatBoxJam  = {
   title: 'Beat Box Jam',
-  img: '/images/Graffiti5.jpeg',
 };
 var airports  = {
   title: 'Airports',
@@ -155,7 +151,6 @@ var menuMusic = {
 // Independant Study
 var askYou = {
   title: 'Ask You',
-  img: '/images/Graffiti2.jpeg',
 };
 var nothingToSay = {
   title: 'Nothing To Say',
@@ -167,7 +162,6 @@ var subwayFunk = {
 }
 var bodySoul = {
   title: 'Body and Soul',
-  img: '/images/Graffiti4.jpeg',
 }
 var theDankness = {
   title: 'The Dankness',
@@ -183,11 +177,9 @@ var ponds = {
 }
 var salaBim = {
   title: 'SalaBim',
-  img: '/images/Graffiti3.jpeg',
 }
 var spring = {
   title: 'Spring',
-  img: '/images/Graffiti6.jpeg',
 };
 var angelEyes = {
   title: 'Angel Eyes',
@@ -293,15 +285,6 @@ var makeShortTitle = function(title) {
   return shortTitle;
 };
 
-var addImages = function (songs) {
-  songs.forEach(function(song) {
-    shortTitle = makeShortTitle(song.title);
-    if (!song.img) {
-      song.img = '/images/' + shortTitle + '.jpeg';
-    }
-  });
-};
-
 var addSongInfo = function(songs) {
   songs.forEach(function(song) {
     //if !addedSongs[song.title]
@@ -313,29 +296,14 @@ var addSongInfo = function(songs) {
     }
     //song.url = '/music/' + shortTitle + '.mp3' if !song.url
     if (!song.url) {
-      song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3';
+      song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle ;
     }
-
-    // empty means no soundcloud
-    // Don't set twice
-//    if (song.soundCloudUrl != '' && !song.soundCloudUrl) {
-//      if (song.soundCloudTitle) {
-//        song.soundCloudUrl = song.soundCloudTitle;
-//      } else {
-//        //Default to shortTitle
-//        if (!song.soundCloudUrl) {
-//          song.soundCloudUrl = shortTitle;
-//        }
-//      }
-//      song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
-//    }
     if (!song.alt) {
       song.alt = song.title;
     }
   });
 };
 
-addImages(homepageMusic);
 addSongInfo(homepageMusic);
 addSongInfo(miscLive);
 addSongInfo(electroFunk);
