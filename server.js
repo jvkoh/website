@@ -68,30 +68,6 @@ app.listen(3000);
 //**********************************
 
 // Misc Live Tracks
-var threeFour = {
-  title: '3-4',
-};
-var hats = {
-  title: 'Hats',
-};
-var brushedCanvas = {
-  title: 'Brushed Canvas',
-};
-var colorsOnceFaded = {
-  title: 'Colors Once Faded',
-};
-var funkJam = {
-  title: 'Funk Jam',
-};
-var hitIt = {
-  title: 'Hit It',
-};
-var underPressure = {
-  title: 'Under Pressure',
-};
-var wayOfDrum = {
-  title: 'Way of Drum',
-};
 
 // Electro Funk
 var discoJams = {
@@ -106,29 +82,37 @@ var heartbreaker  = {
 var venus  = {
   title: 'Venus',
 };
-var beatTheClock  = {
-  title: 'Beat The Clock',
-  alt: 'Ableton Beat The Clock Remix',
-};
 
-// Misc Beats
-var beatBoxJam  = {
-  title: 'Beat Box Jam',
+// Misc. Old Projects
+var beatBoxin  = {
+  title: 'Beat Boxin',
 };
 var airports  = {
   title: 'Airports',
 };
-var allINeed = {
-  title: 'All I Need',
-};
 var comeGetToThis  = {
   title: 'Come Get To This',
 };
-var love = {
-  title: 'Love',
+var hats = {
+  title: 'Hats',
 };
-var bach = {
-  title: 'Bach',
+var brushedCanvas = {
+  title: 'Brushed Canvas',
+};
+var colorsOnceFaded = {
+  title: 'Colors Once Faded',
+};
+var hitIt = {
+  title: 'Hit It',
+};
+var thingsToSee = {
+  title: 'Things To See',
+};
+var spilledMilk = {
+  title: 'Spilled Milk',
+};
+var wayOfDrum = {
+  title: 'Way of Drum',
 };
 
 // Virion
@@ -148,15 +132,21 @@ var menuMusic = {
   title: 'Menu Music',
 };
 
-// Independant Study
+// Musical Studies
 var askYou = {
   title: 'Ask You',
 };
 var nothingToSay = {
   title: 'Nothing To Say',
 };
+var overload = {
+  title: 'Overload',
+};
+var spaceLounge = {
+  title: 'Space Lounge',
+};
 
-// Album
+// For Beats Sake
 var subwayFunk = {
   title: 'Subway Funk',
 }
@@ -205,57 +195,50 @@ var bodySoulReprise = {
   short_title: 'body-and-soul-reprise',
 };
 
-
-var homepageMusic = [
-  bodySoul,
-  discoJams,
+var favorites = [
+  subwayFunk,
+  spaceLounge,
   spring,
-  heartbreaker,
-  askYou,
-  salaBim,
-  beatBoxJam,
-  hats,
+  discoJams,
+  bodySoul,
+  beatBoxin,
+  thingsToSee,
+  theDankness,
 ];
 
-var miscLive = [
-  threeFour,
+var miscOld = [
+  airports,
+  beatBoxin,
   brushedCanvas,
   colorsOnceFaded,
-  funkJam,
+  comeGetToThis,
   hats,
   hitIt,
-  underPressure,
-  wayOfDrum
+  spilledMilk,
+  thingsToSee,
+  wayOfDrum,
 ];
 
-var electroFunk = [
+var electronic = [
   discoJams,
   heartbreaker,
   intermezzo,
   venus,
-  beatTheClock
-];
-
-var miscBeats = [
-  airports,
-  allINeed,
-  bach,
-  beatBoxJam,
-  comeGetToThis,
-  love
 ];
 
 var virion = [
+  menuMusic,
   incubation,
   infection,
   infiltration,
   invasion,
-  menuMusic
 ];
 
 var musicalStudies = [
+  spaceLounge,
+  overload,
   askYou,
-  nothingToSay
+  nothingToSay,
 ];
 
 var forBeatsSake = [
@@ -276,6 +259,13 @@ var forBeatsSake = [
   bodySoulReprise,
 ];
 
+var collections = [
+  forBeatsSake,
+  musicalStudies,
+  electronic,
+  miscOld,
+  virion,
+];
 
 // Helper functions to add default locations of things
 // Remove spaces and make lowercase to get title used in files
@@ -301,17 +291,22 @@ var addSongInfo = function(songs) {
     if (!song.alt) {
       song.alt = song.title;
     }
+    if (!song.songid) {
+      song.songid = shortTitle;
+    }
   });
 };
 
-addSongInfo(homepageMusic);
-addSongInfo(miscLive);
-addSongInfo(electroFunk);
-addSongInfo(miscBeats);
-addSongInfo(virion);
-addSongInfo(musicalStudies);
-addSongInfo(forBeatsSake);
 
+addSongInfo(favorites);
+
+var allSongs = [
+];
+  
+collections.forEach( function(c) {
+  addSongInfo(c);
+  allSongs = allSongs.concat(c);
+});
 
 //**********************************
 // Routes
@@ -319,13 +314,13 @@ addSongInfo(forBeatsSake);
 app.get('/', function(req, res) {
   res.render('welcome', {
     isDevelopment: IS_LOCAL_MACHINE, 
-    homepageMusic: homepageMusic,
-    miscLive: miscLive,
-    electroFunk: electroFunk,
-    miscBeats: miscBeats,
+    favorites: favorites,
+    electronic: electronic,
+    miscOld: miscOld,
     virion: virion,
     musicalStudies: musicalStudies,
     forBeatsSake: forBeatsSake,
+    allSongs: allSongs,
   });
 });
 

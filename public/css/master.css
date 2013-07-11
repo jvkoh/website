@@ -22,12 +22,21 @@ a {
   font-weight: bold;
 }
 
+a img {
+  border: none;
+}
+
 a:hover {
   cursor: pointer;
 }
 
 a.text-link:hover {
   text-decoration: underline;
+}
+
+a.socialLink {
+  display: inline-block;
+  margin: 0 10px 10px 0;
 }
 
 a:visited {
@@ -58,12 +67,6 @@ div#main-bg-wrapper {
   width: 100%;
   top: 120px;
   z-index: -1;
-}
-
-div.divider {
-  width: 90%;
-  border-top: solid 1px #999999;
-  margin: 10px auto 20px;
 }
 
 div#aboutModal {
@@ -128,7 +131,7 @@ div#header {
   width: 100%;
   padding: 10px 0 0;
   position: fixed;
-  height: 40px;
+  height: auto;
   top: 0px;
   z-index: 10;
   text-align:center;
@@ -153,19 +156,19 @@ div#info-bar {
 div#page-title {
   font-size: 24px;
   float: left;
-  width: 200px;
+  width: auto;
   font-weight: bold;
   color: #fff;
 }
 
 div#nav {
   float: right;
-  width: 200px;
+  width: auto;
 }
 
 a.navButton {
   font-size: 16px;
-  padding: 0 5px;
+  padding: 0 10px;
   color: #fff;
 }
 
@@ -315,14 +318,14 @@ a.navButton {
   position: relative;
   width: 120px;
   height: 20px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-weight: bold;
 }
 .jp-current-time,
 .jp-duration {
   display: inline;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 ul.project-list {
@@ -363,7 +366,7 @@ ul.project-list a {
 img.inline-image {
   display: block;
   float: left;
-  margin: 20px;
+  margin: 10px 20px 20px 10px;
 }
 
 a.songContainer {
@@ -378,7 +381,6 @@ a.songContainer {
 }
 
 a.songContainer:hover {
-  background-color: #eef3fa;
   background-color: #0b1f3d;
   color: white;
 }
@@ -409,88 +411,116 @@ div.spaceDiv {
   height: 420px;
 }
 
+.mobileShow {
+  display: none;
+}
+
+div.link-target {
+  display: none;
+  position: relative;
+  top: -110px;
+}
+
+div.hidden {
+  display: none;
+  z-index: -1;
+}
+
 /* Mobile CSS */
-/*
-@media handheld and (max-width: 720px), screen and (max-device-width: 720px) {
+@media handheld and (max-width: 800px), screen and (max-device-width: 800px) {
 
-  body {
-    font-size: 32px;
-    line-height: 36px;
-  }
- 
-  div#main-content {
-    margin-top: 170px;
-  }
+  .nothing {}
 
-  div#main-bg-wrapper {
-    top: 330px;
-  }
-
-  div.link-target {
-    top: -170px;
-  }
-
-  .hovergallery img {
-    display:none;
-  }
-
-  div.mobile-white-link {
-    color: white;
-  }
-
-  div#page-title {
-    float: none;
-    font-size: 52px;
-  }
-
-  div#nav {
+  .mobileHide {
     display: none;
   }
 
+  .mobileShow {
+    display: block;
+  }
+
+  .box {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+
+  div#main-bg-wrapper {
+    margin-top: 400px;
+  }
+
+  div#page-title {
+    width: none;
+    float: none;
+    font-size: 64px;
+    line-height: 48px;
+  }
+
+  div#header {
+    height: 175px;
+  }
+
   div#info-bar {
+    height: auto;
+    width: 100%;
     padding: 20px;
     text-align: center;
   }
 
-  ul.project-list li {
-    width: auto;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    background-color: #0b1e3c;
-    padding: 10px 15px;
-    margin: 0 15px 15px 0;
-    color: white;
-    cursor: pointer;
+  div#main-content {
+    margin-top: 200px;
+    width: 95%;
   }
 
-  .songTitle {
-    border-radius: 10px;
-    padding: 10px 15px;
-    margin: 0 15px 15px 0;
+  a.songContainer {
+    display: block;
+    margin: 10px 0 20px;
+    padding: 10px;
+    border-width: 2px;
+    width: auto;
+  }
+
+  a.songContainer:hover {
+    background-color: #0b1f3d;
+    color: white;
+  }
+
+  img.playButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  div.songTitle {
+    padding: 10px 0 0 5px;
+    font-size: 36px;
   }
 
   #jplayerBar {
-    top: 85px;
-    border-bottom: 8px #BBB solid;
+    margin-top: 35px;
+    width: 600px;
+  }
+
+  .jp-interface {
+    position: relative;
+    height: 20px;
+    width: 600px;
+    top: 2px;
   }
 
   .jp-type-single {
-    width: auto;
-    max-width: 1000px;
     padding-left: 20px;
   }
 
   .jp-volume-bar,
   .jp-mute,
   .jp-unmute,
-  .jp-volume-max {
+  .jp-volume-max,
+  .jp-time-holder {
     display:none !important;
   }
 
   .jp-interface {
     position: relative;
-    height: 80px;
+    height: 50px;
   }
 
   .jp-controls li a {
@@ -498,55 +528,39 @@ div.spaceDiv {
     margin: 0;
     padding: 0;
     width: 200px;
-    height: 80px;
+    height: 50px;
   }
   .jp-controls a.jp-play,
   .jp-controls a.jp-pause {
-    width:80px;
-    background-image: url("/images/jplayer_play_m.jpg");
+    width:50px;
+    background-image: url("/images/jplayer_play_m.png");
   }
   .jp-controls a.jp-pause {
-    background: transparent url("/images/jplayer_pause_m.jpg");
+    background: transparent url("/images/jplayer_pause_m.png");
   }
   .jp-controls a.jp-play:hover {
-    background-image: url("/images/jplayer_play_m.jpg");
+    background-image: url("/images/jplayer_play_m.png");
   }
   .jp-controls a.jp-pause:hover {
-    background: transparent url("/images/jplayer_pause_m.jpg");
+    background: transparent url("/images/jplayer_pause_m.png");
   }
   .jp-controls a.jp-stop {
     left: 90px;
-    width: 80px;
-    background: url("/images/jplayer_stop_m.jpg");
+    width: 50px;
+    background: url("/images/jplayer_stop_m.png");
   }
   .jp-controls a.jp-stop:hover {
-    background-image: url("/images/jplayer_stop_m.jpg");
+    background-image: url("/images/jplayer_stop_m.png");
   }
 
   .jp-title {
-    top: 3px;
-    left: 270px;
+    left: 100px;
+    top: -5px;
+    width: auto;
   }
 
   .jp-title li {
     font-size: 36px;
   }
 
-  .jp-time-holder {
-    display: none;
-  }
-
-  div.spaceDiv {
-    display: none;
-  }
-  
-  div.box {
-    padding: 25px;
-  }
-
-  div.divider {
-    margin: 20px auto 30px;
-  }
-
 }
-*/
