@@ -13,6 +13,9 @@ module.exports = function(grunt) {
     mincss: {
       "dist/release/master.min.css": [
         "public/css/master.css"
+      ],
+      "dist/release/resume.min.css": [
+        "public/css/resume.css"
       ]
     },
 

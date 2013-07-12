@@ -3,3 +3,4 @@ README.md
 confirmIsLocal
 node_modules/
 website_aliases.sh
+public/dev/

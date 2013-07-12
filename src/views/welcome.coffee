@@ -27,12 +27,12 @@ head ->
   # TODO: Add description, keywords, robots, author, favicon
 
   if @isDevelopment
-    link rel:"stylesheet", type:'text/css', href:"/css/master.css"
+    link rel:"stylesheet", type:'text/css', href:"/dev/css/master.css"
 
     # Application source 
-    script type: "text/javascript", src: "/js/libs/jquery.min.js"
-    script type: "text/javascript", src: "/js/libs/jquery.jplayer.min.js"
-    script type:"text/javascript", src:"/js/main.js"
+    script type: "text/javascript", src: "/dev/js/libs/jquery.min.js"
+    script type: "text/javascript", src: "/dev/js/libs/jquery.jplayer.min.js"
+    script type:"text/javascript", src: "/dev/js/main.js"
 
   if !@isDevelopment
     link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"

@@ -1,6 +1,10 @@
 head ->
 
-  link rel:"stylesheet", type:'text/css', href:"/css/resume.css"
+  if @isDevelopment
+    link rel:"stylesheet", type:'text/css', href:"/dev/css/resume.css"
+
+  if !@isDevelopment
+    link rel:"stylesheet", type:'text/css', href:"/release/resume.min.css"
 
 
 body ->
