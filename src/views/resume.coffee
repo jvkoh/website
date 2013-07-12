@@ -13,5 +13,4 @@ body ->
 
 
   div id: 'main-content', ->
-    div class:
 
