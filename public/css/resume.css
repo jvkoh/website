@@ -1,0 +1,64 @@
+@font-face {
+  font-family: EB Garamond;
+  src: url('/fonts/EB_Garamond/EBGaramond-Regular.ttf');
+}
+
+@font-face {
+  font-family: Arvo;
+  src: url('/fonts/Arvo/Arvo-Regular.ttf');
+}
+
+@font-face {
+  font-family: Arvo;
+  src: url('/fonts/Arvo/Arvo-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Arvo;
+  src: url('/fonts/Arvo/Arvo-Italic.ttf');
+  font-style: italic;
+}
+
+/*font-family: 'Merriweather', serif;*/
+
+h1 {
+  font-family: 'EB Garamond', serif;
+  font-weight: normal;
+  font-size: 3em;
+  letter-spacing: 0.4em;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Arvo', serif;
+}
+
+body {
+  font-family: 'Arvo', serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted gray;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+div#header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+div.header-info {
+  margin-bottom: 0.5em;
+}
+
+div#main-content {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+

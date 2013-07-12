@@ -145,7 +145,7 @@ div#header {
 }
 
 div#info-bar {
-  width: 1000px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2px;
@@ -174,13 +174,12 @@ a.navButton {
 
 #jplayerBar {
   color: #fff;
-  width: 550px;
-  padding: 0 0 0 50px;
+  width: 450px;
   display: inline-block;
 }
 
 .jp-type-single {
-  width: 550px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -188,14 +187,14 @@ a.navButton {
 .jp-interface {
   position: relative;
   height: 20px;
-  width: 550px;
+  width: 450px;
   top: 2px;
 }
 .jp-title {
   position: relative;
   top: -29px;
   left: 160px;
-  width: 220px;
+  width: 180px;
   display: block !important;
   text-align: center;
   font-weight: bold;
@@ -311,7 +310,7 @@ a.navButton {
 }
 .jp-time-holder {
   top: -48px;
-  left: 380px;
+  left: 340px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -467,7 +466,7 @@ div.hidden {
   }
 
   div#main-content {
-    margin-top: 200px;
+    margin-top: 210px;
     width: 95%;
   }
 

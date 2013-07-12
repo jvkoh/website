@@ -221,6 +221,7 @@ var miscOld = [
 
 var electronic = [
   discoJams,
+  spaceLounge,
   heartbreaker,
   intermezzo,
   venus,
@@ -235,7 +236,6 @@ var virion = [
 ];
 
 var musicalStudies = [
-  spaceLounge,
   overload,
   askYou,
   nothingToSay,
@@ -321,6 +321,12 @@ app.get('/', function(req, res) {
     musicalStudies: musicalStudies,
     forBeatsSake: forBeatsSake,
     allSongs: allSongs,
+  });
+});
+
+app.get('/resume', function(req, res) {
+  res.render('resume', {
+    isDevelopment: IS_LOCAL_MACHINE, 
   });
 });
 
