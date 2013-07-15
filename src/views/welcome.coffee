@@ -124,7 +124,7 @@ body ->
         text 'If you would like to get in touch with me, feel free to send me an email at '
         a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
         text '. If you would like to see my resume, click '
-        a class: 'text-link', href: '/resume' , 'here'
+        a class: 'text-link', href: '/resume', target: '_blank', 'here'
         text '.'
       p ->
         a class: 'socialLink', target: '_blank', href: 'http://www.linkedin.com/pub/jonathan-koh/2b/911/689', ->
@@ -146,9 +146,9 @@ body ->
       div class: 'box', ->
         h2 "Welcome"
         div class: 'indentedSection', ->
-          div class: 'textPadding', "As you might have guessed by now, my name is Jonathan Koh, and I am a computer programmer, musician, sound engineer, and producer.  This is a showcase of some of my musical work.  I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
+          div class: 'textPadding', "Welcome to this sampling of my musical work.  If you would like to know more about me, check out the about section. I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
           div class: 'textPadding', ->
-            i 'NOTE: If your internet connection is slow, songs may not load immeadiately, please be patient.<br> This music player does not currently support the web browsers MOZILLA FIREFOX or OPERA.'
+            b 'NOTE: If your internet connection is slow, songs may not load immeadiately, please be patient.<br> This music player does not currently support the web browsers MOZILLA FIREFOX or OPERA.'
           div class: 'textPadding', ->
           div class: 'songsContainer', ->
             for song in @favorites
@@ -166,9 +166,9 @@ body ->
           text "For Beats Sake"
         div class: 'indentedSection', ->
           div class: 'textPadding', ->
-            text "For Beats Sake is my first full-length album.  It was released Januray 3rd of 2013 on "
+            text "For Beats Sake is my first full-length album.  It was released January 3rd of 2013 on "
             a class: 'text-link', href: 'http://lazyrabbitmusic.com', 'Bandcamp'
-            text ". I released it under the artist name Lazy Rabbit because of the albums relaxed nature and my love of lettuce. The entire album was recorded and mixed (and kind of mastered) in my home studio using Ableton Live."
+            text ". I released it under the artist name Lazy Rabbit because of the albums relaxed nature and my love of lettuce. The entire album was recorded, mixed, and mastered in my home studio using Ableton Live."
           div class: 'songsContainer', ->
             for song in @forBeatsSake
               a class: 'playableSong songContainer', href: '', url: song.url, title: song.title,id: song.songid, ->
@@ -226,10 +226,10 @@ body ->
 
       ## VIRION ##
       div class: 'box', ->
-        h2 "Viron Music"
+        h2 "Virion Music"
         div class: 'indentedSection', ->
           div class: 'textPadding', ->
-            text "This is the soundtrack that I made to the video game Virion.  It is an arcade style game based on the human immune system and viruses.  Varun Singh and Jonah Kagan did a great job developing the game, and Charis Loke did amazing work with the art. Unfortunately the game is no longer available online."
+            text "This is the soundtrack that I made to the video game Virion.  It is an arcade style game based on the human immune system and viruses.  Varun Singh and Jonah Kagan did a great job developing the game, and Charis Loke did amazing work with the art. I made this soundtrack and designed all of the sound effects."
           div class: 'songsContainer', ->
             for song in @virion
               a class: 'playableSong songContainer', href: '', url: song.url, title: song.title,id: song.songid, ->
@@ -250,6 +250,9 @@ body ->
         p ->
           text 'If you would like to get in touch with me, feel free to send me an email at '
           a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
+          text '. If you would like to see my resume, click '
+          a class: 'text-link', href: '/resume', target: '_blank', 'here'
+          text '.'
         p ->
           a class: 'socialLink', target: '_blank', href: 'http://www.linkedin.com/pub/jonathan-koh/2b/911/689', ->
             img src: '/images/linkedin.png'

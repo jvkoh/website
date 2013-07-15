@@ -12,10 +12,10 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "dist/release/master.min.css": [
-        "public/css/master.css"
+        "public/dev/css/master.css"
       ],
       "dist/release/resume.min.css": [
-        "public/css/resume.css"
+        "public/dev/css/resume.css"
       ]
     },
 

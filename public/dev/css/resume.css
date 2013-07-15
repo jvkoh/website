@@ -8,19 +8,19 @@
   src: url('/fonts/Arvo/Arvo-Regular.ttf');
 }
 
+/*
 @font-face {
   font-family: Arvo;
   src: url('/fonts/Arvo/Arvo-Bold.ttf');
   font-weight: bold;
 }
+*/
 
 @font-face {
   font-family: Arvo;
   src: url('/fonts/Arvo/Arvo-Italic.ttf');
   font-style: italic;
 }
-
-/*font-family: 'Merriweather', serif;*/
 
 h1 {
   font-family: 'EB Garamond', serif;
@@ -29,8 +29,11 @@ h1 {
   letter-spacing: 0.4em;
 }
 
-h2, h3, h4, h5 {
-  font-family: 'Arvo', serif;
+h2 {
+  font-family: 'EB Garamond', serif;
+  font-weight: normal;
+  border-bottom: 1px solid #999;
+  font-size: 1.5em;
 }
 
 body {
@@ -40,7 +43,7 @@ body {
 a {
   color: black;
   text-decoration: none;
-  border-bottom: 1px dotted gray;
+  border-bottom: 1px dotted #999;
 }
 
 a:hover {
@@ -49,7 +52,8 @@ a:hover {
 
 div#header {
   text-align: center;
-  margin-bottom: 50px;
+  width: 900px;
+  margin: 0 auto 60px;
 }
 
 div.header-info {
@@ -57,8 +61,46 @@ div.header-info {
 }
 
 div#main-content {
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
 }
 
+div.section-wrapper {
+  margin-bottom: 60px;
+}
+
+div.entry-wrapper {
+  margin: 10px 20px 20px;
+}
+
+div.entry-title {
+  font-weight: bold;
+  float: left;
+}
+
+div.entry-date {
+  font-style: italic;
+  float: right;
+}
+
+div.entry-text {
+  clear: both;
+  font-size: 0.9em;
+  margin: 0 0 0 50px;
+}
+
+ul.plain-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+ul.bullet-list li,
+ul.plain-list li {
+  margin-bottom: 2px;
+}
+
+ul.bullet-list {
+  list-style-type: solid circle;
+  padding: 0px;
+}
 

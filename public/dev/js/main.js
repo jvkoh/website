@@ -24,7 +24,7 @@ $(document).ready(function() {
       playSong(firstSong.id, firstSong.url, firstSong.title, true);
       },
     supplied: 'mp3',
-    solution: 'flash, html',
+    solution: 'html,flash',
     wmode: 'window',
     swfPath: 'scripts',
     volume: '1.0',
