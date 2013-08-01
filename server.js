@@ -261,8 +261,8 @@ var forBeatsSake = [
 
 var collections = [
   forBeatsSake,
-  musicalStudies,
   electronic,
+  musicalStudies,
   miscOld,
   virion,
 ];

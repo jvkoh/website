@@ -31,8 +31,8 @@ body {
   background-color: #eef3fa;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  font-weight: normal;
   line-height: 24px;
+  font-weight: normal;
   color: #0b1f3d;
   text-shadow: 0 0 0 #fff;
   margin: 0;
@@ -92,15 +92,16 @@ div#main-bg-wrapper {
 }
 
 div#aboutModal {
-  width: 700px;
-  height: 400px;
+  max-width: 700px;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
   padding: 40px 30px 30px;
-  top: -570px;
+  top: 0;
   border: solid 2px #0b1f3d;
   margin: 0 auto;
+  display: none;
 
   -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
   -moz-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
@@ -143,10 +144,9 @@ div#main-bg-image {
 }
 
 div#main-content {
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 0 20px;
 } 
 
 div#header {
@@ -167,12 +167,11 @@ div#header {
 }
 
 div#info-bar {
-  width: 900px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2px;
   padding: 0 0 10px;
-  height:30px;
 }
 
 div#page-title {
@@ -195,6 +194,7 @@ a.navButton {
 }
 
 #jplayerBar {
+  clear: both;
   color: #fff;
   width: 450px;
   display: inline-block;
@@ -448,7 +448,7 @@ div.hidden {
 }
 
 /* Mobile CSS */
-@media handheld and (max-width: 800px), screen and (max-device-width: 800px) {
+@media handheld, screen and (max-device-width: 800px) {
 
   .nothing {}
 
@@ -461,74 +461,83 @@ div.hidden {
   }
 
   .box {
-    margin-bottom: 30px;
-    padding: 20px;
+    margin-top: 20px;
+  }
+
+  body {
+    line-height: normal;
   }
 
   div#main-bg-wrapper {
-    margin-top: 400px;
+    top: 160px;
+  }
+    
+  div#main-bg-image {
+    background: no-repeat url("/images/WaveLogoBG_m.png");
+    height: 400px;
+    max-width: 300px;
   }
 
   div#page-title {
-    width: none;
+    width: auto;
     float: none;
-    font-size: 64px;
-    line-height: 48px;
+    margin-bottom: 5px;
   }
 
   div#header {
-    height: 175px;
+    height: 70px;
+    padding: 5px 0;
   }
 
   div#info-bar {
     height: auto;
     width: 100%;
-    padding: 20px;
     text-align: center;
   }
 
   div#main-content {
-    margin-top: 210px;
+    margin-top: 90px;
     width: 95%;
+  }
+
+  div.text-padding {
+    padding-bottom: 5px;
+  }
+
+  div.indentedSection {
+    padding-left: 10px;
   }
 
   a.songContainer {
     display: block;
-    margin: 10px 0 20px;
-    padding: 10px;
-    border-width: 2px;
-    width: auto;
+    margin: 10px 0;
+    padding: 5px;
   }
 
   a.songContainer:hover {
-    background-color: #0b1f3d;
-    color: white;
-  }
-
-  img.playButton {
-    width: 40px;
-    height: 40px;
+    color: #0b1f3d;
+    background-color: white;
   }
 
   div.songTitle {
-    padding: 10px 0 0 5px;
-    font-size: 36px;
+    padding: 2px 0 0 2px;
+  }
+
+  img.inline-image {
+    width: 90%;
+    float: none;
   }
 
   #jplayerBar {
-    margin-top: 35px;
-    width: 600px;
+    width: 200px;
   }
 
   .jp-interface {
-    position: relative;
-    height: 20px;
-    width: 600px;
-    top: 2px;
+    width: auto;
   }
 
   .jp-type-single {
-    padding-left: 20px;
+    width: auto;
   }
 
   .jp-volume-bar,
@@ -539,49 +548,28 @@ div.hidden {
     display:none !important;
   }
 
-  .jp-interface {
-    position: relative;
-    height: 50px;
+  .jp-controls {
+    width: 60px
   }
 
   .jp-controls li a {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
-    height: 50px;
   }
-  .jp-controls a.jp-play,
-  .jp-controls a.jp-pause {
-    width:50px;
-    background-image: url("/images/jplayer_play_m.png");
-  }
-  .jp-controls a.jp-pause {
-    background: transparent url("/images/jplayer_pause_m.png");
-  }
-  .jp-controls a.jp-play:hover {
-    background-image: url("/images/jplayer_play_m.png");
-  }
-  .jp-controls a.jp-pause:hover {
-    background: transparent url("/images/jplayer_pause_m.png");
-  }
+
   .jp-controls a.jp-stop {
-    left: 90px;
-    width: 50px;
-    background: url("/images/jplayer_stop_m.png");
-  }
-  .jp-controls a.jp-stop:hover {
-    background-image: url("/images/jplayer_stop_m.png");
+    left: 36px;
   }
 
   .jp-title {
-    left: 100px;
-    top: -5px;
+    left: 60px;
+    top: -20px;
     width: auto;
   }
 
   .jp-title li {
-    font-size: 36px;
+    font-size: 14px;
   }
 
 }

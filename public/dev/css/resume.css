@@ -22,22 +22,35 @@
   font-style: italic;
 }
 
+table {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  border-spacing: 0px;
+}
+
+p, ul {
+  margin: 0;
+}
+
 h1 {
   font-family: 'EB Garamond', serif;
   font-weight: normal;
-  font-size: 3em;
-  letter-spacing: 0.4em;
+  font-size: 48px;
+  letter-spacing: 20px;
 }
 
 h2 {
   font-family: 'EB Garamond', serif;
   font-weight: normal;
   border-bottom: 1px solid #999;
-  font-size: 1.5em;
+  font-size: 26px;
 }
 
 body {
   font-family: 'Arvo', serif;
+  font-size: 14px;
 }
 
 a {
@@ -52,16 +65,18 @@ a:hover {
 
 div#header {
   text-align: center;
-  width: 900px;
-  margin: 0 auto 60px;
+  width: auto;
+  margin: 0 0 60px;
+  font-size: 16px;
 }
 
 div.header-info {
-  margin-bottom: 0.5em;
+  margin-bottom: 8px;
 }
 
 div#main-content {
-  width: 900px;
+  width: auto;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -74,18 +89,21 @@ div.entry-wrapper {
 }
 
 div.entry-title {
-  font-weight: bold;
   float: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
 div.entry-date {
   font-style: italic;
   float: right;
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
 div.entry-text {
   clear: both;
-  font-size: 0.9em;
   margin: 0 0 0 50px;
 }
 
@@ -94,13 +112,18 @@ ul.plain-list {
   padding: 0px;
 }
 
-ul.bullet-list li,
 ul.plain-list li {
   margin-bottom: 2px;
 }
 
-ul.bullet-list {
-  list-style-type: solid circle;
-  padding: 0px;
-}
+@media handheld and (max-width: 800px), screen and (max-device-width: 800px) {
 
+  div.entry-title {
+    float: none;
+  }
+
+  div.entry-date {
+    float: none;
+  }
+
+}

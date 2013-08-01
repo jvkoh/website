@@ -44,6 +44,13 @@ $(document).ready(function() {
     return setTitle(songTitle);
   };
 
+  // Moving the About Modal
+  var aboutM, hideH, hideS;
+  aboutM = $('#aboutModal');
+  hideH = aboutM.height() + 500;
+  hideS = "-" + hideH + "px"
+  aboutM.css({ top: hideS });
+
   playSong(firstSong.id, firstSong.url, firstSong.title, true);
 
   jPlayerDiv.bind( $.jPlayer.event.ended , function(e) {
@@ -87,6 +94,7 @@ $(document).ready(function() {
   {
     e.preventDefault();
     var aboutModal = $('#aboutModal');
+    aboutModal.show();
     aboutModal.animate({top:"-30px"},500);
     aboutModal.addClass('show_about');
     $('#modalDim').fadeIn(500);
@@ -96,9 +104,14 @@ $(document).ready(function() {
   {
     e.preventDefault();
     var aboutModal = $('#aboutModal');
+    var hideHeight = aboutModal.height() + 500;
+    var hideString = "-" + hideHeight + "px"
     aboutModal.removeClass('show_about');
-    aboutModal.animate({top:"-570px"},500);
+    aboutModal.animate({top:hideString},500);
     $('#modalDim').fadeOut(500);
+    setTimeout( function() {
+      aboutModal.hide();
+    }, 500);
   }
 
   $('.aboutButton').click(function(e) {

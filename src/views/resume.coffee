@@ -1,5 +1,10 @@
 head ->
 
+  title "Jonathan Koh - Resume"
+
+  meta charset:'utf-8'
+  meta 'http-equiv':'X-UA-Compatible', content:'IE=edge,chrome=1'
+
   if @isDevelopment
     link rel:"stylesheet", type:'text/css', href:"/dev/css/resume.css"
 
@@ -54,12 +59,14 @@ body ->
               i 'Javascript, C++, Python, HTML,'
               text ' JQuery, AJAX, CSS, SASS, Scheme, Django, Linux, '
               i 'ProTools, and Ableton Live.'
+      div class: 'entry-wrapper', ->
         ## Basic Proficiency 
         div class: 'entry-title', 'Basic Proficiency with'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li ->
               text 'Java, Node.js, Express, AWS, CoffeeScript, Git, Vim, WordPress, Regular Expressions, the Facebook API, Final Cut Pro, Logic Pro, Soldering, and Max/MSP.'
+      div class: 'entry-wrapper', ->
         ## Exposure to
         div class: 'entry-title', 'Exposure to'
         div class: 'entry-text', ->
@@ -74,11 +81,11 @@ body ->
       ## Sound Designer and Recording Engineer
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Sound Designer and Recording Engineer, Self Employed'
-        div class: 'entry-date', 'February 2011 ‒ Present'
+        div class: 'entry-date', 'February 2011 - Present'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             #li 'Recorded and mixed Joe Kenneallys Album'
-            #li 'Tracked and mixed recordings of songs from the show New Weird America'
+            li 'Tracked and mixed recordings of songs from the show New Weird America'
             li ->
               text 'Played in, Recorded, and Mixed Eric Axelman\'s album '
               a href: 'http://ericaxelman.bandcamp.com/album/to-be-honest', target: '_blank', 'To Be Honest.'
@@ -89,7 +96,7 @@ body ->
       ## MEME and Music Coordinator
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Media and Music Technology Coordinator, Brown University'
-        div class: 'entry-date', 'November 2011 ‒ May 2013'
+        div class: 'entry-date', 'November 2011 - May 2013'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li 'Shot, managed, and edited Brown University music department performance videos in Final Cut.'
@@ -99,7 +106,7 @@ body ->
       ## LoveGov
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Web Developer, LoveGov Inc'
-        div class: 'entry-date', 'June 2012 ‒ September 2012'
+        div class: 'entry-date', 'June 2012 - September 2012'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li 'Worked closely with two other developers, two designers, and one CEO to create lovegov.com.'
@@ -110,7 +117,7 @@ body ->
       ## Reper
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Web Development Intern, Reper'
-        div class: 'entry-date', 'June 2011 ‒ September 2011'
+        div class: 'entry-date', 'June 2011 - September 2011'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li 'Worked extensively in Python with Django frameworks at reper.com.'
@@ -120,7 +127,7 @@ body ->
       ## Q-Division
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Recording Intern, Q-Division Studios'
-        div class: 'entry-date', 'May 2011 ‒ September 2011'
+        div class: 'entry-date', 'May 2011 - September 2011'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
            li 'Recorded and edited audio in Pro Tools.'
@@ -129,7 +136,7 @@ body ->
       ## Wellspring
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Recording Intern, Wellspring Sound'
-        div class: 'entry-date', 'May 2010 ‒ September 2010'
+        div class: 'entry-date', 'May 2010 - September 2010'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li 'Made preliminary mixes for clients with ProTools and RADAR.'

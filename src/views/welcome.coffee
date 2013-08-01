@@ -4,6 +4,7 @@ head ->
 
   meta charset:'utf-8'
   meta 'http-equiv':'X-UA-Compatible', content:'IE=edge,chrome=1'
+  meta name: "viewport", content: "initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no"
   #meta(name='viewport', content='width=640, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
   #meta name:'apple-mobile-web-app-capable', content:'yes'
 
@@ -124,7 +125,7 @@ body ->
         text 'If you would like to get in touch with me, feel free to send me an email at '
         a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
         text '. If you would like to see my resume, click '
-        a class: 'text-link', href: '/resume', target: '_blank', 'here'
+        a class: 'text-link', href: 'http://resume.jvkoh.com/', target: '_blank', 'here'
         text '.'
       p ->
         a class: 'socialLink', target: '_blank', href: 'http://www.linkedin.com/pub/jonathan-koh/2b/911/689', ->
@@ -146,10 +147,9 @@ body ->
       div class: 'box', ->
         h2 "Welcome"
         div class: 'indentedSection', ->
-          div class: 'textPadding', "Welcome to this sampling of my musical work.  If you would like to know more about me, check out the about section. I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
+          div class: 'textPadding', "This website displays a sampling of my musical work.  If you would like to know more about me, check out the about section. I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
           div class: 'textPadding', ->
             b 'NOTE: If your internet connection is slow, songs may not load immeadiately, please be patient.<br> This music player does not currently support the web browsers MOZILLA FIREFOX or OPERA.'
-          div class: 'textPadding', ->
           div class: 'songsContainer', ->
             for song in @favorites
               a class: 'playableSong songContainer', href: '', url: song.url, title: song.title,id: song.songid, ->
@@ -211,7 +211,7 @@ body ->
 
       ## OLD TRACKS ##
       div class: 'box', ->
-        h2 "Misc Live Tracks"
+        h2 "Older Tracks"
         div class: 'indentedSection', ->
           div class: 'textPadding', "These are songs that I wrote/improvised in my first two years of college.  The majority of the tracks are all played by me, one instrument at a time.  This was also recorded in my home studio with either Sonar or ProTools."
           div class: 'songsContainer', ->
@@ -251,7 +251,7 @@ body ->
           text 'If you would like to get in touch with me, feel free to send me an email at '
           a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
           text '. If you would like to see my resume, click '
-          a class: 'text-link', href: '/resume', target: '_blank', 'here'
+          a class: 'text-link', href: '/http://resume.jvkoh.com/', target: '_blank', 'here'
           text '.'
         p ->
           a class: 'socialLink', target: '_blank', href: 'http://www.linkedin.com/pub/jonathan-koh/2b/911/689', ->
