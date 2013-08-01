@@ -251,7 +251,7 @@ body ->
           text 'If you would like to get in touch with me, feel free to send me an email at '
           a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
           text '. If you would like to see my resume, click '
-          a class: 'text-link', href: '/http://resume.jvkoh.com/', target: '_blank', 'here'
+          a class: 'text-link', href: 'http://resume.jvkoh.com/', target: '_blank', 'here'
           text '.'
         p ->
           a class: 'socialLink', target: '_blank', href: 'http://www.linkedin.com/pub/jonathan-koh/2b/911/689', ->
