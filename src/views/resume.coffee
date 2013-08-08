@@ -34,7 +34,7 @@ body ->
             li ->
               b 'Relevent Courses:'
               text ' Design and Analysis of Algorithms, Introduction to Computer Graphics, Multiprocessor Synchronization, Computational Photography, Computational Linguistics.'
-            li 'GPA: 3.8/4.0'
+            li 'GPA: 3.82/4.0'
 
       ## Concord Academy
       div class: 'entry-wrapper', ->
@@ -78,10 +78,21 @@ body ->
     div class: 'section-wrapper', ->
       h2 'Work Experience'
 
+      ## LoveGov
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Web Developer, LoveGov Inc'
+        div class: 'entry-date', 'June 2012 - September 2012'
+        div class: 'entry-text', ->
+          ul class: 'plain-list', ->
+            li 'Worked closely with two other developers, two designers, and one CEO to create lovegov.com.'
+            li 'Parsed and Analyzed large amounts of legislative data from XML files using Django.'
+            li 'Created the notification system, profile pages, and group pages using HTML, SASS/CSS, Javascript, JQuery, AJAX, Python, and Django.'
+            li 'Implemented the design for the news feed using HTML, SASS/CSS, Javascript, JQuery, and AJAX.'
+
       ## Sound Designer and Recording Engineer
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Sound Designer and Recording Engineer, Self Employed'
-        div class: 'entry-date', 'February 2011 - Present'
+        div class: 'entry-date', 'February 2011 - May 2013'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             #li 'Recorded and mixed Joe Kenneallys Album'
@@ -102,17 +113,6 @@ body ->
             li 'Shot, managed, and edited Brown University music department performance videos in Final Cut.'
             li 'Maintained music department studio microphones and professional audio equipment.'
             li 'Worked as sound and lighting technician for music department shows and events.'
-
-      ## LoveGov
-      div class: 'entry-wrapper', ->
-        div class: 'entry-title', 'Web Developer, LoveGov Inc'
-        div class: 'entry-date', 'June 2012 - September 2012'
-        div class: 'entry-text', ->
-          ul class: 'plain-list', ->
-            li 'Worked closely with two other developers, two designers, and one CEO to create lovegov.com.'
-            li 'Parsed and Analyzed large amounts of legislative data from XML files using Django.'
-            li 'Created the notification system, profile pages, and group pages using HTML, SASS/CSS, Javascript, JQuery, AJAX, Python, and Django.'
-            li 'Implemented the design for the news feed using HTML, SASS/CSS, Javascript, JQuery, and AJAX.'
 
       ## Reper
       div class: 'entry-wrapper', ->
@@ -146,9 +146,15 @@ body ->
     ## Hobbies section
     div class: 'section-wrapper', ->
       h2 'Hobbies'
+      ## Meditation
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Meditation'
+        div class: 'entry-text', ->
+          ul class: 'plain-list', ->
+            li 'Regulalry practices mindfulness.'
       ## Musician
       div class: 'entry-wrapper', ->
-        div class: 'entry-title', 'Musician'
+        div class: 'entry-title', 'Music'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li ->
@@ -187,3 +193,11 @@ body ->
           ul class: 'plain-list', ->
             li 'Played Intramural Outdoor and Indoor Soccer for four years and Brown University.'
             li 'Played Varsity Soccer in high school.'
+
+      ## Others
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Basketball'
+        div class: 'entry-text', ->
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Hockey'
+        div class: 'entry-text', ->
