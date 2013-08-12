@@ -147,7 +147,7 @@ body ->
       div class: 'box', ->
         h2 "Welcome"
         div class: 'indentedSection', ->
-          div class: 'textPadding', "This website displays a sampling of my musical work.  If you would like to know more about me, check out the about section. I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
+          div class: 'textPadding', "My name is Jonathan Koh, and I am a computer scientist and musician.  This website is a sampling of my musical endeavors.  If you would like to know more about me, check out the about section. I hope you enjoy listening, and if you're unsure of where to start, here are a few of my favorites!"
           div class: 'textPadding', ->
             b 'NOTE: If your internet connection is slow, songs may not load immeadiately, please be patient.<br> This music player does not currently support the web browsers MOZILLA FIREFOX or OPERA.'
           div class: 'songsContainer', ->
