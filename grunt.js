@@ -21,10 +21,15 @@ module.exports = function(grunt) {
 
     // Takes the built require.js file and minifies it for filesize benefits.
     min: {
-      dist: {
-        src: "dist/debug/jvkoh_website.app.js",
-        dest: "dist/release/javascript.min.js"
-      }
+      "dist/release/javascript.min.js": [
+        "dist/debug/jvkoh_website.app.js"
+      ],
+      "dist/release/life.min.js": [
+        "dist/debug/life.app.js"
+      ],
+      "dist/release/jquery.min.js": [
+        "dist/debug/jquery.app.js"
+      ]
     },
 
   });

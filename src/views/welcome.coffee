@@ -37,6 +37,7 @@ head ->
 
   if !@isDevelopment
     link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"
+    script type: 'text/javascript', src: '/release/jquery.min.js'
     script type: 'text/javascript', src: '/release/javascript.min.js'
 
 

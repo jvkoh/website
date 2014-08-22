@@ -1,8 +1,11 @@
 # Compile js
 jsmin <public/dev/js/main.js >public/dev/js/main.min.js
+jsmin <public/dev/js/life.js >public/dev/js/life.min.js
 
 # Concatenate 3 needed js files
-cat public/dev/js/libs/jquery.min.js public/dev/js/libs/jquery.jplayer.min.js public/dev/js/main.min.js > dist/debug/jvkoh_website.app.js
+cat public/dev/js/libs/jquery.jplayer.min.js public/dev/js/main.min.js > dist/debug/jvkoh_website.app.js
+scp public/dev/js/libs/jquery.min.js dist/debug/jquery.app.js
+scp public/dev/js/life.min.js dist/debug/life.app.js
 
 # Minify js and css
 grunt release

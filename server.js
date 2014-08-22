@@ -330,6 +330,12 @@ app.get('/resume', function(req, res) {
   });
 });
 
+app.get('/projects/life', function(req, res) {
+  res.render('life', {
+    isDevelopment: IS_LOCAL_MACHINE, 
+  });
+});
+
 app.get('/*', function(req, res) {
   res.redirect('/');
 });
