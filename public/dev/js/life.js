@@ -685,6 +685,6 @@ $(document).ready(function() {
             life.loadCells(cells);
         }
     } else {
-       $('body').html("Unfortunately this project does not support mobile devices.  If you're still interested, come back on your non-mobile device!");
+       $('body').html("Unfortunately this project does not support mobile devices.  If you're still interested, come back on your non-mobile device! <a href=\"/\">Return to the main site</a>");
     }
 });
