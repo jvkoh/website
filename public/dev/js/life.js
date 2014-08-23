@@ -1,9 +1,10 @@
 var DEAD_COLOR = "#000000";
 var RESOLUTION = [96, 48];
 var KEY_LOCK_TIME = 125;
-var HIGH_REFRESH = 125;
-var LOW_REFRESH = 625;
 var BORDER_COLOR = "#555555";
+var LIFE_SPEEDS = [
+    40, 80, 125, 250, 500, 1000, 2000, 4000, 8000 
+]
 var LIFE_COLORS = [
     { age:0, color:"#99FF99" },
     { age:1, color:"#33FF33" },
@@ -20,17 +21,17 @@ var URL_SLICE_SIZE = 32;
  * That means that cells is an array of rows.
  */
 function Life(el) {
-    this.refresh_rate = HIGH_REFRESH;
+    this.refresh_rate = LIFE_SPEEDS[0];
     this.height = RESOLUTION[1];
     this.width = RESOLUTION[0];
-    this.low_speed = false;
+    this.speed_index = 0;
     this.wrap_screen = true;
     this.cells = []; // 2d matrix full of the actual cell objects
     this.cell_status = []; // used to do iteration calculations, 2d matrix full of boolean
     this.current_cell = null; // currently moused over cell
     this.element = el;
     this.message_lock = null;
-    this.refresh_locked = false;
+    this.refresh_lock = null;
     this.key_lock = [];
     this.play = false;
     this.draw = false;
@@ -50,6 +51,8 @@ function Life(el) {
 <br>\
 == Controls ==<br>\
 spacebar: play/pause the simulation<br>\
+left arrow: decrease simulation speed<br>\
+right arrow: increase simulation speed<br>\
 c: clear the screen<br>\
 d: draw with the mouse<br>\
 e: erase with the mouse<br>\
@@ -58,7 +61,6 @@ h: toggle this help menu<br>\
 n: move through a single life iteration<br>\
 s: save url for current life state<br>\
 w: toggle screen wrapping<br>\
-z: toggle simulation speed<br>\
 <br>\
 == Disclaimer ==<br>\
 This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Game of Life</a> devised by John Horton Conway<br>\
@@ -134,7 +136,7 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
         this.buildCellStatuses();
         this.calculateSize();
 
-        this.setLowSpeed(false, true);
+        this.setSpeed(2, true);
         this.showHelp(true);
     }
 
@@ -236,10 +238,7 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
     }
 
     this.refresh = function() {
-        if (this.refresh_locked) {
-            return;
-        }
-        this.refresh_locked = true;
+        clearTimeout(this.refresh_lock);
 
         // calculation pass
         this.calculateCellStatuses();
@@ -247,9 +246,8 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
         // implementation pass
         this.applyStatusToCells();
 
-        this.refresh_locked = false;
         if (this.play) {
-            setTimeout(this.refresh.bind(this), this.refresh_rate);
+            this.refresh_lock = setTimeout(this.refresh.bind(this), this.refresh_rate);
         }
     }
 
@@ -370,6 +368,32 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
         this.key_lock[key] = setTimeout(func.bind.apply(func, args), KEY_LOCK_TIME);
     }
 
+    this.setSpeed = function(index, hide_message) {
+        var speed;
+
+        if (index >= LIFE_SPEEDS.length) {
+            this.showMessage("minimum speed reached");
+            return;
+        }
+
+        if (index < 0) {
+            this.showMessage("maximum speed reached");
+            return;
+        }
+
+        this.speed_index = index;
+        this.refresh_rate = LIFE_SPEEDS[this.speed_index];
+        speed = 1000.0 / LIFE_SPEEDS[this.speed_index];
+
+        if (!hide_message) {
+            this.showMessage("speed set to " + speed + "hz");
+        }
+
+        if (this.play) {
+            this.refresh();
+        }
+    }
+
     this.togglePlay = function(hide_message) {
         this.play = !this.play;
 
@@ -410,24 +434,6 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
         for (y = 0; y < this.height; y++) {
             for (x = 0; x < this.width; x++) {
                 this.cells[y][x].setCellBorder(value);
-            }
-        }
-    }
-
-    this.setLowSpeed = function(is_low_speed, hide_message) {
-        this.low_speed = is_low_speed;
-
-        if (this.low_speed) {
-            this.refresh_rate = LOW_REFRESH;
-        } else {
-            this.refresh_rate = HIGH_REFRESH;
-        }
-
-        if (!hide_message) {
-            if (this.low_speed) {
-                this.showMessage("low speed");
-            } else {
-                this.showMessage("high speed");
             }
         }
     }
@@ -476,6 +482,8 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
      * Keyboard/Mouse handling section
      *
      * space = 32   - pause/play
+     * left = 37    - decrease speed
+     * right = 39   - increase speed
      * c = 67       - clear
      * d = 68       - draw
      * e = 69       - rease
@@ -484,7 +492,6 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
      * n = 78       - step
      * p = 80       - toggle screen wrapping
      * s = 83       - save to url
-     * z = 90       - toggle refresh rate TODO make this a slider?
      */
     this.handleKeydown = function(event) {
         var key;
@@ -492,6 +499,12 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
         switch(key) {
             case 32: // spacebar - toggle play
                 this.throttleKey(key, this.togglePlay, this);
+                break;
+            case 37: // left key - lower speed
+                this.setSpeed(this.speed_index + 1);
+                break;
+            case 39: // right key - raise speed
+                this.setSpeed(this.speed_index - 1);
                 break;
             case 67: // c key - reset
                 this.reset();
@@ -517,11 +530,8 @@ This is an artistic recreation of the <a href=\"http://en.wikipedia.org/wiki/Con
             case 87: // w key - screen wrapping
                 this.setScreenWrapping(!this.wrap_screen);
                 break;
-            case 90: // z key - toggle refresh rate
-                this.setLowSpeed(!this.low_speed);
-                break;
             default:
-                //console.log(event.keyCode);
+                console.log(event.keyCode);
                 break;
         }
     }
