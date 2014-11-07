@@ -30,15 +30,15 @@ head ->
   if @isDevelopment
     link rel:"stylesheet", type:'text/css', href:"/dev/css/master.css"
 
-    # Application source 
+    # Application source
     script type: "text/javascript", src: "/dev/js/libs/jquery.min.js"
     script type: "text/javascript", src: "/dev/js/libs/jquery.jplayer.min.js"
     script type:"text/javascript", src: "/dev/js/main.js"
 
   if !@isDevelopment
-    link rel: 'stylesheet', type:'text/css', href: "/release/master.min.css"
-    script type: 'text/javascript', src: '/release/jquery.min.js'
-    script type: 'text/javascript', src: '/release/javascript.min.js'
+    link rel: 'stylesheet', type:'text/css', href: "/css/master.css"
+    script type: 'text/javascript', src: '/js/jquery.min.js'
+    script type: 'text/javascript', src: '/js/javascript.min.js'
 
 
 body ->

@@ -24,13 +24,13 @@ head ->
        '''
 
   if @isDevelopment
-    # Application source 
+    # Application source
     script type: "text/javascript", src: "/dev/js/libs/jquery.min.js"
     script type:"text/javascript", src: "/dev/js/life.js"
 
   if !@isDevelopment
-    script type: 'text/javascript', src: '/release/jquery.min.js'
-    script type: 'text/javascript', src: '/release/life.min.js'
+    script type: 'text/javascript', src: '/js/jquery.min.js'
+    script type: 'text/javascript', src: '/js/life.min.js'
 
 
 body style:'overflow:hidden; height:100%; width:100%;', ->
