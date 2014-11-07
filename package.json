@@ -1,7 +1,7 @@
 {
   "name": "jvkoh",
   "description": "Jonathan Koh's Personal Website",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "author": "Jonathan Koh <jonathanvkoh@gmail.com>",
   "main": "server.js",
   "scripts": {

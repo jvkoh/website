@@ -17,35 +17,9 @@ body ->
     h1 'Jonathan Koh'
     div class: 'header-info',  ->
       a href: 'mailto:jonathanvkoh@gmail.com', 'jonathanvkoh@gmail.com'
-    div class: 'header-info', '(781)635-7469'
 
   ## All main resume content
   div id: 'main-content', ->
-    ## Education section
-    div class: 'section-wrapper', ->
-      h2 'Education'
-      ## Brown
-      div class: 'entry-wrapper', ->
-        div class: 'entry-title', 'Brown University, Providence RI'
-        div class: 'entry-date', 'Undergraduate Class of 2013'
-        div class: 'entry-text', ->
-          ul class: 'plain-list', ->
-            li 'Received a dual Bachelors Degree in Computer Science and Electronic Music'
-            li ->
-              b 'Relevent Courses:'
-              text ' Design and Analysis of Algorithms, Introduction to Computer Graphics, Multiprocessor Synchronization, Computational Photography, Computational Linguistics.'
-            li 'GPA: 3.82/4.0'
-
-      ## Concord Academy
-      div class: 'entry-wrapper', ->
-        div class: 'entry-title', 'Concord Academy, Concord MA'
-        div class: 'entry-date', 'Class of 2009'
-        div class: 'entry-text', ->
-          ul class: 'plain-list', ->
-            li ->
-              b 'Relevent Courses:'
-              text ' AP Computer Science, Advanced Music Theory, Recording Technology.'
-            li 'Head of Jazz and Rock and Roll Clubs.'
 
     ## Skills section
     div class: 'section-wrapper', ->
@@ -56,27 +30,33 @@ body ->
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li ->
-              i 'Javascript, C++, Python, HTML,'
-              text ' JQuery, AJAX, CSS, SASS, Scheme, Django, Linux, '
+              i 'Javascript, C++, Python, HTML, PHP, SQL,'
+              text ' JQuery, AJAX, CSS, SASS, Unix, Vim, Git, bash, '
               i 'ProTools, and Ableton Live.'
       div class: 'entry-wrapper', ->
-        ## Basic Proficiency 
+        ## Basic Proficiency
         div class: 'entry-title', 'Basic Proficiency with'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li ->
-              text 'Java, Node.js, Express, AWS, CoffeeScript, Git, Vim, WordPress, Regular Expressions, the Facebook API, Final Cut Pro, Logic Pro, Soldering, and Max/MSP.'
+              text 'Java, Node.js, Django, Express, AWS, CoffeeScript, WordPress, Regular Expressions, the Facebook API, Final Cut Pro, Logic Pro, Soldering, and Max/MSP.'
       div class: 'entry-wrapper', ->
         ## Exposure to
         div class: 'entry-title', 'Exposure to'
         div class: 'entry-text', ->
           ul class: 'plain-list', ->
             li ->
-              text 'PHP, SQL, and Unix Shell Scripting.'
+              text 'Scala, Scalding, Hadoop'
 
     ## Work Experience Section
     div class: 'section-wrapper', ->
       h2 'Work Experience'
+
+      ## Etsy
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Software Engineer, Etsy Inc.'
+        div class: 'entry-date', 'October 2013 - Present'
+        div class: 'entry-text', ''
 
       ## LoveGov
       div class: 'entry-wrapper', ->
@@ -103,7 +83,7 @@ body ->
             li 'Produced and engineered a ten song studio album for the Brown/RISD a cappella group Harmonic Motion.'
             li 'Designed and produced commercial sound and music for A Better World by Design.'
             li 'Created the soundtrack and sound effects for the arcade-style game Virion.'
-            
+
       ## MEME and Music Coordinator
       div class: 'entry-wrapper', ->
         div class: 'entry-title', 'Media and Music Technology Coordinator, Brown University'
@@ -142,7 +122,33 @@ body ->
             li 'Made preliminary mixes for clients with ProTools and RADAR.'
             li 'Managed and cared for studio microphones, instruments, and other audio equipment.'
             li 'Fixed broken audio equipment and sent broken equipment to repair shops.'
-            
+
+    ## Education section
+    div class: 'section-wrapper', ->
+      h2 'Education'
+      ## Brown
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Brown University, Providence RI'
+        div class: 'entry-date', 'Undergraduate Class of 2013'
+        div class: 'entry-text', ->
+          ul class: 'plain-list', ->
+            li 'Received a dual Bachelors Degree in Computer Science and Electronic Music'
+            li ->
+              b 'Relevent Courses:'
+              text ' Design and Analysis of Algorithms, Introduction to Computer Graphics, Multiprocessor Synchronization, Computational Photography, Computational Linguistics.'
+            li 'GPA: 3.82/4.0'
+
+      ## Concord Academy
+      div class: 'entry-wrapper', ->
+        div class: 'entry-title', 'Concord Academy, Concord MA'
+        div class: 'entry-date', 'Class of 2009'
+        div class: 'entry-text', ->
+          ul class: 'plain-list', ->
+            li ->
+              b 'Relevent Courses:'
+              text ' AP Computer Science, Advanced Music Theory, Recording Technology.'
+            li 'Head of Jazz and Rock and Roll Clubs.'
+
     ## Hobbies section
     div class: 'section-wrapper', ->
       h2 'Hobbies'
