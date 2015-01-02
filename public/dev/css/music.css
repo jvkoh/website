@@ -26,3 +26,8 @@ body.lazyrabbit {
     height: 64px;
     text-align: center;
 }
+
+.music-links .music-link.disabled {
+    opacity: 0.3;
+    filter: alpha(opacity=40);
+}
