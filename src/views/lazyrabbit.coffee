@@ -35,11 +35,11 @@ body class:"lazyrabbit", ->
     div class:"music-logo", ->
         img src:'/images/LazyRabbit.jpg', width:'600px', ->
     div class:"music-links", ->
-        a class:"music-link", target:"_blank", href:"http://inspectrefunk.bandcamp.com", ->
+        a class:"music-link", target:"_blank", href:"http://lazyrabbit.bandcamp.com", ->
             img src:"https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png", ->
-        a class:"music-link", target:"_blank", href:"https://www.soundcloud.com/inspectrefunk", ->
+        a class:"music-link", target:"_blank", href:"https://www.soundcloud.com/lazyrabbitmusic", ->
             img src:"https://developers.soundcloud.com/assets/logo_big_black-75c05c178d54c50c8ff0afbb282d2c21.png", ->
-        a class:"music-link", target:"_blank", href:"https://www.facebook.com/inspectrefunk", ->
+        a class:"music-link", target:"_blank", href:"https://www.facebook.com/lazyrabbitmusic", ->
             img src:"/images/FB-f-Logo__blue_58.png", ->
 
 
