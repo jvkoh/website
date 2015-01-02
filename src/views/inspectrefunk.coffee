@@ -32,8 +32,8 @@ head ->
 
 body class:"inspectrefunk", ->
 
-    div class:"music-logo", ->
-        img src:'/images/InspectreFunk.jpg', width:'600px', ->
+    div class:"music-logo-container", ->
+        img class:"music-logo", src:'/images/InspectreFunk.jpg', ->
     div class:"music-links", ->
         a class:"music-link", target:"_blank", href:"http://inspectrefunk.bandcamp.com", ->
             img src:"https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png", ->

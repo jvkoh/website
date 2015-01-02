@@ -10,6 +10,11 @@ body.lazyrabbit {
     margin: 0;
 }
 
+.music-logo {
+    width: 80%;
+    max-width: 600px;
+}
+
 .music-links {
     padding-top: 40px;
 }

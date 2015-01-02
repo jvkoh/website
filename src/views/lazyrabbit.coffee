@@ -32,8 +32,8 @@ head ->
 
 body class:"lazyrabbit", ->
 
-    div class:"music-logo", ->
-        img src:'/images/LazyRabbit.jpg', width:'600px', ->
+    div class:"music-logo-container", ->
+        img class:"music-logo", src:'/images/LazyRabbit.jpg', ->
     div class:"music-links", ->
         a class:"music-link", target:"_blank", href:"http://lazyrabbit.bandcamp.com", ->
             img src:"https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png", ->
