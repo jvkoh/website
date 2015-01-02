@@ -1,11 +1,13 @@
 # Compile js
-jsmin <assets/js/main.js >assets/js/main.min.js
-jsmin <assets/js/life.js >assets/js/life.min.js
+jsmin <public/dev/js/main.js >public/dev/js/main.min.js
+jsmin <public/dev/js/life.js >public/dev/js/life.min.js
 
 # Concatenate 3 needed js files
-cat assets/js/libs/jquery.jplayer.min.js assets/js/main.min.js > public/js/javascript.min.js
-scp assets/js/libs/jquery.min.js public/js/jquery.min.js
-scp assets/js/life.min.js public/js/life.min.js
+cat public/dev/js/libs/jquery.jplayer.min.js public/dev/js/main.min.js > public/dev/js/javascript.min.js
+scp public/dev/js/javascript.min.js public/js/javascript.min.js
+scp public/dev/js/libs/jquery.min.js public/js/jquery.min.js
+scp public/dev/js/life.min.js public/js/life.min.js
 
-scp assets/css/master.css public/css/master.css
-scp assets/css/resume.css public/css/resume.css
+scp public/dev/css/master.css public/css/master.css
+scp public/dev/css/resume.css public/css/resume.css
+scp public/dev/css/music.css public/css/music.css
