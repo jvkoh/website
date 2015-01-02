@@ -109,7 +109,7 @@ body ->
       div class: "clear-both", ->
 
 
-  ## Background Image ##  
+  ## Background Image ##
   div id: 'main-bg-wrapper', ->
     div id: 'main-bg-image', ->
 

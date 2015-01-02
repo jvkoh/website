@@ -1,0 +1,23 @@
+body.inspectrefunk {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+body.lazyrabbit {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.music-links {
+    padding-top: 40px;
+}
+
+.music-links .music-link {
+    display: inline-block;
+    padding: 0 20px;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}

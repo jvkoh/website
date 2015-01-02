@@ -313,7 +313,7 @@ collections.forEach( function(c) {
 //**********************************
 app.get('/', function(req, res) {
   res.render('welcome', {
-    isDevelopment: IS_LOCAL_MACHINE, 
+    isDevelopment: IS_LOCAL_MACHINE,
     favorites: favorites,
     electronic: electronic,
     miscOld: miscOld,
@@ -324,15 +324,27 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/inspectrefunk', function(req, res) {
+  res.render('inspectrefunk', {
+    isDevelopment: IS_LOCAL_MACHINE,
+  });
+});
+
+app.get('/lazyrabbit', function(req, res) {
+  res.render('lazyrabbit', {
+    isDevelopment: IS_LOCAL_MACHINE,
+  });
+});
+
 app.get('/resume', function(req, res) {
   res.render('resume', {
-    isDevelopment: IS_LOCAL_MACHINE, 
+    isDevelopment: IS_LOCAL_MACHINE,
   });
 });
 
 app.get('/projects/life', function(req, res) {
   res.render('life', {
-    isDevelopment: IS_LOCAL_MACHINE, 
+    isDevelopment: IS_LOCAL_MACHINE,
   });
 });
 
