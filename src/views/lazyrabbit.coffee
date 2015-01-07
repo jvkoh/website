@@ -37,7 +37,6 @@ body class:"lazyrabbit", ->
     div class:"music-links", ->
         a class:"music-link", target:"_blank", href:"http://lazyrabbit.bandcamp.com", ->
             img src:"/images/bandcamp_60x60_black.png", ->
-        a class:"music-link", target:"_blank", href:"https://www.soundcloud.com/inspectrefunk", ->
         a class:"music-link", target:"_blank", href:"https://www.soundcloud.com/lazyrabbitmusic", ->
             img src:"/images/soundcloud.png", ->
         a class:"music-link", target:"_blank", href:"https://www.facebook.com/lazyrabbitmusic", ->
