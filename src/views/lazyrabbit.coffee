@@ -42,5 +42,7 @@ body class:"lazyrabbit", ->
         a class:"music-link", target:"_blank", href:"https://www.facebook.com/lazyrabbitmusic", ->
             img src:"/images/FB-f-Logo__blue_58.png", ->
 
+    a class:"corner-link", href:"http://inspectrefunk.com", ->
+        img class:"corner-link-image", src:"/images/InspectreFunkSmall.jpg", ->
 
 

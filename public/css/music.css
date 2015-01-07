@@ -31,3 +31,15 @@ body.lazyrabbit {
     opacity: 0.3;
     filter: alpha(opacity=40);
 }
+
+.corner-link {
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.corner-link-image {
+    width: 80px;
+    height: 80px;
+}
