@@ -36,7 +36,7 @@ body class:"inspectrefunk", ->
         img class:"music-logo", src:'/images/InspectreFunk.jpg', ->
     div class:"music-links", ->
         #a class:"music-link", target:"_blank", href:"http://inspectrefunk.bandcamp.com", ->
-        div class:"music-link disabled", ->
+        a class:"music-link", target:"_blank", href:"https://inspectrefunk.bandcamp.com/", ->
             img src:"/images/bandcamp_60x60_black.png", ->
         a class:"music-link", target:"_blank", href:"https://www.soundcloud.com/inspectrefunk", ->
             img src:"/images/soundcloud.png", ->
