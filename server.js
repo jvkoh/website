@@ -348,6 +348,12 @@ app.get('/projects/life', function(req, res) {
   });
 });
 
+app.get('/projects/grid', function(req, res) {
+  res.render('grid', {
+    isDevelopment: IS_LOCAL_MACHINE,
+  });
+});
+
 app.get('/*', function(req, res) {
   res.redirect('/');
 });
