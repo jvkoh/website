@@ -74,10 +74,11 @@ p {
 }
 
 div.box {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.97);
   border-radius: 20px;
   padding: 15px;
   margin-top: 10px;
+  border: 2px #0b1f3d solid;
 
   -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
   -moz-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
@@ -108,8 +109,8 @@ div#aboutModal {
   box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
 
   background-color: white;
-  background: -prefix-linear-gradient(top, rgb(255, 255, 255), rgb(238,243,250)); 
-  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238,243,250)); 
+  background: -prefix-linear-gradient(top, rgb(255, 255, 255), rgb(238,243,250));
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238,243,250));
   background: -webkit-gradient( linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(238,243,250)));
 }
 
@@ -147,7 +148,7 @@ div#main-content {
   max-width: 900px;
   margin: 60px auto 0;
   padding: 0 20px;
-} 
+}
 
 div#header {
   width: 100%;
@@ -158,12 +159,9 @@ div#header {
   z-index: 10;
   text-align:center;
   background-color: #0b1f3d;
-  background: -prefix-linear-gradient(top, rgb(29,62,100), rgb(12,30,51)); 
-  background: linear-gradient(to bottom, rgb(29,62,100), rgb(12,30,51)); 
-  background: -webkit-gradient( linear, left top, left bottom, from(rgb(29, 62, 100)), to(rgb(12,30,51)));
-  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.6);
 }
 
 div#info-bar {
@@ -471,7 +469,7 @@ div.hidden {
   div#main-bg-wrapper {
     top: 160px;
   }
-    
+
   div#main-bg-image {
     background: no-repeat url("/images/WaveLogoBG_m.png");
     height: 400px;

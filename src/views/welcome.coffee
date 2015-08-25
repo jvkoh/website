@@ -121,7 +121,7 @@ body ->
       h2 "About"
       img src: '/images/profile.jpeg', alt:'Me', class: 'inline-image', width:'180px', ->
       p ->
-       text 'I am a 22 year old male human, and my spirit animal is a rabbit.  I have been programming for 5 years, and producing and recording music for about 8 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  Having recently graduated from Brown University with a dual-degree in Computer Science and Electronic music, I am always looking for interesting ways that I can put either my programming or musical abilities to good use. So if you need someone to help you with your technology needs, your sound needs, or both, I\'m your guy.'
+       text 'I am a 24 year old male human.  I have been programming for 7 years, and producing and recording music for about 10 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  I am always looking for interesting ways that I can put either my programming or musical abilities to good use. So if you need someone to help you with your technology needs, your sound needs, or both, I\'m your guy.'
       p ->
         text 'If you would like to get in touch with me, feel free to send me an email at '
         a class: 'text-link', href: 'mailto:jonathanvkoh@gmail.com' , 'jonathanvkoh@gmail.com'
@@ -135,7 +135,7 @@ body ->
           img src: '/images/facebook.png'
         a class: 'socialLink', target: '_blank', href: 'http://twitter.com/jvkoh', ->
           img src: '/images/twitter.png'
-      
+
       div class: 'clear-both', ->
 
   ## MAIN CONTENT ##

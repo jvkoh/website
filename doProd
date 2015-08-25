@@ -11,4 +11,3 @@ scp public/dev/js/canvas.js public/js/canvas.js
 
 scp public/dev/css/master.css public/css/master.css
 scp public/dev/css/resume.css public/css/resume.css
-scp public/dev/css/music.css public/css/music.css
