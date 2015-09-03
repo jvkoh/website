@@ -1,29 +1,28 @@
 @font-face {
   font-family: Roboto;
-  src: url('/fonts/Roboto/Roboto-Regular.ttf');
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
 
 @font-face {
   font-family: Roboto;
-  src: url('/fonts/Roboto/Roboto-Bold.ttf');
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: Roboto;
-  src: url('/fonts/Roboto/Roboto-Italic.ttf');
+  src: url('../fonts/Roboto/Roboto-Italic.ttf');
   font-style: italic;
 }
 
 @font-face {
   font-family: Roboto;
-  src: url('/fonts/Roboto/Roboto-BoldItalic.ttf');
+  src: url('../fonts/Roboto/Roboto-BoldItalic.ttf');
   font-weight: bold;
   font-style: italic;
 }
 
-div.clear-both
-{
+div.clear-both {
   clear:both;
 }
 
@@ -70,7 +69,7 @@ h2 {
 }
 
 p {
-  margin: 15px 25px;
+  margin: 10px 20px;
 }
 
 div.box {
@@ -94,7 +93,6 @@ div#main-bg-wrapper {
 
 div#aboutModal {
   max-width: 700px;
-  min-height: 400px;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
@@ -140,7 +138,7 @@ div#main-bg-image {
   max-width:600px;
   height:800px;
   margin: 0 auto;
-  background: url("/images/WaveLogoBG.png");
+  background: url("../images/WaveLogoBG.png");
   background-repeat: no-repeat;
 }
 
@@ -191,10 +189,17 @@ a.navButton {
   color: #fff;
 }
 
+img.section-image {
+  display: block;
+  float: left;
+  width: 200px;
+  margin: 5px 20px 5px 10px;
+}
+
 img.inline-image {
   display: block;
   float: left;
-  margin: 5px 20px 5px 10px;
+  margin: 10px 20px 20px 10px;
 }
 
 a.songContainer {
@@ -261,7 +266,7 @@ div.hidden {
   }
 
   div#main-bg-image {
-    background: no-repeat url("/images/WaveLogoBG_m.png");
+    background: no-repeat url("../images/WaveLogoBG_m.png");
     height: 400px;
     max-width: 300px;
   }
@@ -273,8 +278,9 @@ div.hidden {
   }
 
   div#header {
-    height: 70px;
     padding: 5px 0;
+    margin-bottom: 10px;
+    position: static;
   }
 
   div#info-bar {
@@ -284,9 +290,9 @@ div.hidden {
   }
 
   div#main-content {
-    margin-top: 90px;
+    margin-top: 0px;
     width: 95%;
-    padding: 0px;
+    padding: 0px 0px 10px;
   }
 
   p.text-padding {
@@ -295,6 +301,12 @@ div.hidden {
 
   div.indentedSection {
     padding-left: 10px;
+  }
+
+  img.section-image {
+    width: 90%;
+    margin: 10px auto 10px;
+    float: none;
   }
 
   img.inline-image {
