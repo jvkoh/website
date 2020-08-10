@@ -50,12 +50,12 @@ function Life(el) {
 - If a cell has 3 neighbors it is born (and survives if it is already alive)<br>\
 <br>\
 == Controls ==<br>\
+d: draw with the mouse<br>\
+e: erase with the mouse<br>\
+c: clear the screen<br>\
 spacebar: play/pause the simulation<br>\
 left arrow: decrease simulation speed<br>\
 right arrow: increase simulation speed<br>\
-c: clear the screen<br>\
-d: draw with the mouse<br>\
-e: erase with the mouse<br>\
 g: toggle grid<br>\
 h: toggle this help menu<br>\
 n: move through a single life iteration<br>\

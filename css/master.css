@@ -27,7 +27,7 @@ div.clear-both {
 }
 
 body {
-  background-color: #eef3fa;
+  background-color: #b8c5d6;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -74,21 +74,13 @@ p {
 
 div.box {
   background-color: rgba(255,255,255,0.97);
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 15px;
-  margin-top: 10px;
-  border: 2px #0b1f3d solid;
+  margin: 10px 5px 0px;
 
   -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
   -moz-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
-}
-
-div#main-bg-wrapper {
-  position: fixed;
-  width: 100%;
-  top: 120px;
-  z-index: -1;
 }
 
 div#aboutModal {
@@ -134,14 +126,6 @@ div#modalDim {
   top: 0;
 }
 
-div#main-bg-image {
-  max-width:600px;
-  height:800px;
-  margin: 0 auto;
-  background: url("../images/WaveLogoBG.png");
-  background-repeat: no-repeat;
-}
-
 div#main-content {
   max-width: 900px;
   margin: 60px auto 0;
@@ -181,6 +165,45 @@ div#page-title {
 div#nav {
   float: right;
   width: auto;
+}
+
+a.hover-link {
+  position: relative;
+  display: block;
+  margin: 10px 5px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
+  -moz-box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
+}
+
+.hover-link-image {
+  width: 100%;
+  z-index: 2;
+}
+
+.hover-link-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  z-index: 3;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hover-link-text .inner-text {
+  margin-top: 20px;
+}
+
+.hover-link-text:hover {
+  opacity: 0.9;
 }
 
 a.navButton {
@@ -263,12 +286,6 @@ div.hidden {
 
   div#main-bg-wrapper {
     top: 160px;
-  }
-
-  div#main-bg-image {
-    background: no-repeat url("../images/WaveLogoBG_m.png");
-    height: 400px;
-    max-width: 300px;
   }
 
   div#page-title {

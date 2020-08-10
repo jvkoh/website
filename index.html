@@ -1,173 +1,166 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Jonny Koh</title>
+  <head>
+    <title>Jonny Koh</title>
 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edgechrome=1" />
-        <meta name="viewport" content="initial-scale=1.0 maximum-scale=2.0 minimum-scale=1.0 user-scalable=yes" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="A website for documenting the various musical projects that Jonny Koh has been a part of (or is still a part of)" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edgechrome=1" />
+    <meta name="viewport" content="initial-scale=1.0 maximum-scale=2.0 minimum-scale=1.0 user-scalable=yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="A website for documenting the various projects that Jonny Koh has been a part of (or is still a part of)" />
 
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-35896590-1']);
-            _gaq.push(['_setDomainName', 'jvkoh.com']);
-            _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35896590-1']);
+      _gaq.push(['_setDomainName', 'jvkoh.com']);
+      _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-        </script>
+    </script>
 
-        <link rel="stylesheet" type="text/css" href="./css/master.css" />
-        <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/main.js"></script>
-    </head>
+    <link rel="stylesheet" type="text/css" href="./css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/master.css" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </head>
 
-    <!-- BODY -->
-    <body>
+  <!-- BODY -->
+  <body>
 
-        <div id="modalDim" class="mobileHide"></div>
+    <div id="modalDim" class="mobileHide"></div>
 
-        <!-- HEADER -->
-        <div id="header">
-            <div id="info-bar">
-                <div id="page-title">Jonny Koh</div>
+    <!-- HEADER -->
+    <div id="header">
+      <div id="info-bar">
+        <div id="page-title">Jonny Koh</div>
 
-                <div id="nav" class="mobileHide">
-                    <a class="navButton aboutButton" href="#">About Me/Contact</a>
-                </div>
-
-                <div class="clear-both"></div>
-            </div>
+        <div id="nav" class="mobileHide">
+          <a class="navButton aboutButton" href="#">About Me/Contact</a>
         </div>
 
-        <!-- BACKGROUND -->
-        <div id="main-bg-wrapper">
-            <div id="main-bg-image"></div>
+        <div class="clear-both"></div>
+      </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div id="main-bg-wrapper">
+      <div id="main-bg-image"></div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="aboutContainer" class="mobileHide">
+      <div id="aboutModal">
+        <a href="#" class="aboutButton aboutClose">
+          <img src="./images/close.png">
+        </a>
+
+        <h2>About</h2>
+        <img src="./images/profile.jpeg" alt="Me" class="inline-image" width="180px" />
+
+        <p>
+          I am a 29 year old human.  I have been programming for 12 years, and producing and recording music for about 15 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  I am always looking for interesting ways that I can put either my programming or musical abilities to good use. If you need someone to help you with your technology needs, your sound needs, or both, I'm your guy.
+        </p>
+
+        <p>
+          If you would like to get in touch with me, feel free to send me an email at <a class="text-link" href="mailto:jonathanvkoh@gmail.com">jonathanvkoh@gmail.com</a>. If you would like to see my resume, click <a class='text-link' href='http://resume.jvkoh.com/' target='_blank'>here</a>.
+        </p>
+
+        <div class="clear-both"></div>
+      </div>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+
+      <div id="homePage">
+
+        <div class="box">
+          <h2>Welcome</h2>
+          <p>
+            I'm a musician and a software engineer. This website contains a sampling of my projects. If you would like to know more about me, check out the about section.
+          </p>
         </div>
 
-        <!-- Contact Modal -->
-        <div id="aboutContainer" class="mobileHide">
-            <div id="aboutModal">
-                <a href="#" class="aboutButton aboutClose">
-                    <img src="./images/close.png">
-                </a>
+        <div class="grid-x">
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://lawrencetheband.com">
+              <img class="hover-link-image" src="./images/LawrenceLogo.jpg"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Lawrence</div>
+              </div>
+            </a>
+          </div>
 
-                <h2>About</h2>
-                <img src="./images/profile.jpeg" alt="Me" class="inline-image" width="180px" />
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://backline.me">
+              <img class="hover-link-image" src="./images/BacklineIcon.png"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Backline.me</div>
+              </div>
+            </a>
+          </div>
 
-                <p>
-                    I am a 25 year old male human.  I have been programming for 7 years, and producing and recording music for about 10 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  I am always looking for interesting ways that I can put either my programming or musical abilities to good use. So if you need someone to help you with your technology needs, your sound needs, or both, I'm your guy.
-                </p>
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://inspectrefunk.com">
+              <img class="hover-link-image" src="./images/InspectreFunk.jpg"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Inspectre Funk</div>
+              </div>
+            </a>
+          </div>
 
-                <p>
-                    If you would like to get in touch with me, feel free to send me an email at <a class="text-link" href="mailto:jonathanvkoh@gmail.com">jonathanvkoh@gmail.com</a>. If you would like to see my resume, click <a class='text-link' href='http://resume.jvkoh.com/' target='_blank'>here</a>.
-                </p>
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://splitter.fm">
+              <img class="hover-link-image" src="./images/SplitterIcon.png"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Splitter.fm</div>
+              </div>
+            </a>
+          </div>
 
-                <p>
-                    <a class="socialLink" target="_blank" href="http://www.linkedin.com/pub/jonathan-koh/2b/911/689">
-                        <img src="./images/linkedin.png" />
-                    </a>
-                    <a class="socialLink" target="_blank" href="http://facebook.com/jonnyk">
-                        <img src="./images/facebook.png" />
-                    </a>
-                    <a class="socialLink" target="_blank" href="http://twitter.com/jvkoh">
-                        <img src="./images/twitter.png" />
-                    </a>
-                </p>
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://lazyrabbitmusic.com">
+              <img class="hover-link-image" src="./images/LazyRabbit.jpg"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Lazy Rabbit</div>
+              </div>
+            </a>
+          </div>
 
-                <div class="clear-both"></div>
-            </div>
+          <div class="cell small-6 medium-4 large-3">
+            <a class="hover-link" href="https://jvkoh.com/life#,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;8388608,2281185264,127;8388608,2148008192,;8388608,2148008192,;8388608,2148008192,;8388608,2148008192,;8388608,2214068480,15;8388608,2148008192,;8388608,2148008192,;8388608,2148008192,;8388608,2148008192,;8388608,2148008192,;1065353216,2148016112,127;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,;,,">
+              <img class="hover-link-image" src="./images/Life.png"/>
+              <div class="hover-link-text">
+                <div class="inner-text">Life</div>
+              </div>
+            </a>
+          </div>
         </div>
 
+        <div class="box mobileShow">
+          <h2>About</h2>
+          <img src="./images/profile.jpeg" alt="Me" class="section-image"/>
+          <p>
+            I am a 29 year old human.  I have been programming for 12 years, and producing and recording music for about 15 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  I am always looking for interesting ways that I can put either my programming or musical abilities to good use. If you need someone to help you with your technology needs, your sound needs, or both, I'm your guy.
+          </p>
 
-        <!-- MAIN CONTENT -->
-        <div id="main-content">
-
-            <div id="homePage">
-
-                <div class="box">
-                    <h2>Welcome</h2>
-                    <p>
-                        I'm a musician and a software engineer. This website is a sampling of projects I have worked on. If you would like to know more about me, check out the about section.
-                    </p>
-                </div>
-
-                <div class="box">
-                    <img class="section-image" src="./images/LazyRabbit.jpg"/>
-                    <h2>Lazy Rabbit</h2>
-                    <p>
-                        Lazy Rabbit likes to make relaxing jazzy hip hop beats and eats lettuce. He binge sleeps, and is awake at odd hours. He lives in a cave, and produces all of his music at home at Rabbit Hole Studios. You can find his music and social media things at <a href="http://lazyrabbitmusic.com" target="_blank">lazyrabbitmusic.com</a>.
-                    </p>
-                    <div class="clear-both"></div>
-                </div>
-
-                <div class="box">
-                    <img class="section-image" src="./images/LawrenceLogo.jpg"/>
-                    <h2>Lawrence</h2>
-                    <p>
-                        Lawrence is a band lead by the soulful brother and sister duo Clyde and Gracie Lawrence. They write music that can be described roughly as soul-pop, with heavy motown and funk influences. Lawrence's debut album, <a href="https://itunes.apple.com/us/album/breakfast/id1083201159" target="_blank">Breakfast</a>, is on available iTunes, Spotfy, and most other music selling websites.  You can follow Lawrence's various fun and active social media channels: <a href="https://instagram.com/lawrencetheband/" target="_blank">instagram</a> <a href="https://www.facebook.com/lawrencetheband" target="_blank">facebook</a> <a href="https://twitter.com/lawrencetheband" target="_blank">twitter</a> <a href="www.lawrencetheband.com">website</a>
-                    </p>
-                    <div class="clear-both"></div>
-                </div>
-
-                <div class="box">
-                    <img class="section-image" src="./images/PowPow.jpg"/>
-                    <h2>Pow Pow</h2>
-                    <p>
-                        Pow Pow is a very different band. They play rock music, sometimes, but they always use instruments. Their sound is punk-rockish at times, and also somewhat folk inspired. I guess you could call it "alternative rock", whatever that means. They're based in New York, and have some recorded music at <a href="http://powpowisaband.com" target="_blank">powpowisaband.com</a>.
-                    </p>
-                    <div class="clear-both"></div>
-                </div>
-
-                <div class="box">
-                    <img class="section-image" src="./images/InspectreFunk.jpg"/>
-                    <h2>Inspectre Funk</h2>
-                    <p>
-                        The Inspectre makes glitchy funk inspired dance music. He likes to try to dance like a robot, and stays up all night looking for other ghosts to party with. He lives in high orbit in his Space Lounge, piloted by a crew of incredible funk and jazz musicians. You can find his work at <a href="http://inspectrefunk.com" target="_blank">inspectrefunk.com</a>.
-                    </p>
-                    <div class="clear-both"></div>
-                </div>
-
-                <div class="box mobileShow">
-                    <h2>About</h2>
-                    <img src="./images/profile.jpeg" alt="Me" class="section-image"/>
-
-                    <p>
-                        I am a 25 year old male human.  I have been programming for 7 years, and producing and recording music for about 10 years.  I have been playing guitar since I was 10 years old, and drums since I was 14 (although I am a completely self-taught drummer).  I am always looking for interesting ways that I can put either my programming or musical abilities to good use. So if you need someone to help you with your technology needs, your sound needs, or both, I'm your guy.
-                    </p>
-
-                    <p>
-                        If you would like to get in touch with me, feel free to send me an email at <a class="text-link" href="mailto:jonathanvkoh@gmail.com">jonathanvkoh@gmail.com</a>. If you would like to see my resume, click <a class='text-link' href='http://resume.jvkoh.com/' target='_blank'>here</a>.
-                    </p>
-
-                    <p>
-                        <a class="socialLink" target="_blank" href="http://www.linkedin.com/pub/jonathan-koh/2b/911/689">
-                            <img src="./images/linkedin.png" />
-                        </a>
-                        <a class="socialLink" target="_blank" href="http://facebook.com/jonnyk">
-                            <img src="./images/facebook.png" />
-                        </a>
-                        <a class="socialLink" target="_blank" href="http://twitter.com/jvkoh">
-                            <img src="./images/twitter.png" />
-                        </a>
-                    </p>
-
-                    <div class="clear-both"></div>
-                </div>
-
-            </div>
-
+          <p>
+            If you would like to get in touch with me, feel free to send me an email at <a class="text-link" href="mailto:jonathanvkoh@gmail.com">jonathanvkoh@gmail.com</a>. If you would like to see my resume, click <a class='text-link' href='http://resume.jvkoh.com/' target='_blank'>here</a>.
+          </p>
+          <div class="clear-both"></div>
         </div>
+      </div>
+    </div>
 
 
-    </body>
+  </body>
 
 </html>
