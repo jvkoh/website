@@ -1,2 +1,6 @@
+.DS_STORE
+
 node_modules
 *.swp
+
+/images_unused/*

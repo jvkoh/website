@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Jonny Koh</title>
+    <title>Conatct - Jonny Koh</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0 maximum-scale=2.0 minimum-scale=1.0 user-scalable=yes" />
@@ -15,8 +15,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <style>
+      .name-text { color: #bed4db; }
+      .nav-item .nav-link { color: #bed4db; }
+      .nav-item .nav-link.active { color: #bed4db; }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(190, 212, 219, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      }
+
       body {
-        background-image: url('/images/JonnyHome.jpg');
+        background-image: url('/images/JonnyContact.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -30,6 +38,7 @@
         }
       }
     </style>
+
   </head>
 
   <!-- BODY -->
@@ -55,7 +64,7 @@
               <a class="nav-link" href="/software">Software</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link active" href="/contact">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -67,14 +76,14 @@
 
     <div class="navbar-spacer"></div>
 
-    <img class="img-fluid mb-4 d-sm-none" src="/images/JonnyHome.jpg" />
+    <img class="img-fluid mb-4 d-sm-none" src="/images/JonnyContact.jpg" />
     <div class="mb-3 d-none d-sm-block"></div>
 
     <div class="container">
 
       <div class="content-container p-sm-3 rounded">
         <h2 class="text-center spaced-header mb-3">
-          WELCOME
+          CONTACT
         </h2>
 
         <div class="text-indent">
