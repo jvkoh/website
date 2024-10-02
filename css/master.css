@@ -113,7 +113,13 @@ a:hover {
 }
 
 .content-container {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.88);
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.top-spacer {
+  height: 70vh;
 }
 
 .navbar-spacer {
